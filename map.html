@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map</title>
+    <link rel="icon" type="image/x-icon" href="icon/logo.ico">
+    <link rel="stylesheet" href="style_mobile.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div class="container" onclick="myFunction(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+      <div class="menu">
+          <ul>
+              <li><a href="index.html">CU Music Walk</a></li>
+              <li class="active"><a href="map.html">แผนที่</a></li>
+              <li><a href="info.html">ข้อมูล</a></li>
+              <li><a href="contact.html">ติดต่อ</a></li>
+          </ul>
+      </div>
+  </div>
+
+    <div id="map" >
+      <div id="googleMap" style="width:100%;height: 800px;;"></div>
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+              }
+      </script>
+
+      <script src="map.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Vo7mDfgZpDGRANZ9ubMdaxMsKCyhlOc&callback=myMap"></script>
+
+        </div>
+    </body>
+</html>
