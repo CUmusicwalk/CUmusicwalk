@@ -84,11 +84,12 @@
 /* menu bar */
 
 
-/*google map
+/*google map*/
 #googleMap {
-	margin-top: 10%;
+	top: 10opx;
+    bottom: 100px;
 }
-*/
+
 /*Information Window*/
 .header {
 	background-color: #DB5F8E;
