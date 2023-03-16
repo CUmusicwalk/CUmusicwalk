@@ -2,36 +2,40 @@
 <html lang="th">
 <meta http-equiv="content-type" charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <head>
     <title>CUmusicwalk</title>
     <link rel="icon" type="image/x-icon" href="icon/logo.ico">
     <link rel="stylesheet" href="style_mobile.css" type="text/css"/>
     <link rel="stylesheet" href="style_pc.css" type="text/css"/>
+    <link rel="stylesheet" href="w3stylesheet.css" type="text/css">
 </head>
 
 <body>
-    <div class="container" onclick="myFunction(this)">
-        <div class="logo"><img src="icon/logo.png"></div>
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <div class="menu">
-            <ul>
-                <li class="active"><a href="index.html">CU Music Walk</a></li>
-                <li><a href="map.html">แผนที่</a></li>
-                <li><a href="info.html">ข้อมูล</a></li>
-                <li><a href="contact.html">ติดต่อ</a></li>
-            </ul>
-        </div>
-    </div>
-          
-          
+    <div class="w3-bar" style="background-color:#F7B5BB;color:#555">
+        <img src="icon/logo.png" class="w3-bar-item logo">
+        <a href="index.html" class="w3-bar-item w3-button w3-hide-small" id="home">หน้าหลัก</a>
+        <a href="map.html" class="w3-bar-item w3-button w3-hide-small ">แผนที่</a>
+        <a href="info.html" class="w3-bar-item w3-button w3-hide-small ">ข้อมูล</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small ">ติดต่อ</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right  w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+      </div>
       
-       
-        <script>
-            function myFunction(x) {
-              x.classList.toggle("change");
-            }
-            </script>
+      <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+        <a href="index.html" class="w3-bar-item w3-button">หน้าหลัก</a>
+        <a href="map.html" class="w3-bar-item w3-button">แผนที่</a>
+        <a href="info.html" class="w3-bar-item w3-button">ข้อมูล</a>
+        <a href="contact.html" class="w3-bar-item w3-button">ติดต่อ</a>
+      </div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("demo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        </script>
     </body>
 </html>

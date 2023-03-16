@@ -4,30 +4,38 @@
     <title>Map</title>
     <link rel="icon" type="image/x-icon" href="icon/logo.ico">
     <link rel="stylesheet" href="style_mobile.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="w3stylesheet.css" type="text/css">
   </head>
   <body>
-    <div class="container" onclick="myFunction(this)">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <div class="menu">
-          <ul>
-              <li><a href="index.html">CU Music Walk</a></li>
-              <li class="active"><a href="map.html">แผนที่</a></li>
-              <li><a href="info.html">ข้อมูล</a></li>
-              <li><a href="contact.html">ติดต่อ</a></li>
-          </ul>
+    <body>
+      <div class="w3-bar" style="background-color:#F7B5BB;color:#555">
+        <img src="icon/logo.png" class="w3-bar-item logo">
+        <a href="index.html" class="w3-bar-item w3-button w3-hide-small">หน้าหลัก</a>
+        <a href="map.html" class="w3-bar-item w3-button w3-hide-small ">แผนที่</a>
+        <a href="info.html" class="w3-bar-item w3-button w3-hide-small ">ข้อมูล</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small ">ติดต่อ</a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right  w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
       </div>
-  </div>
-
-    <div id="map" >
-      <div id="googleMap" style="width:100%;height: 800px;;"></div>
-    <script>
-      function myFunction(x) {
-        x.classList.toggle("change");
-              }
-      </script>
-
+      
+      <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+        <a href="index.html" class="w3-bar-item w3-button">หน้าหลัก</a>
+        <a href="map.html" class="w3-bar-item w3-button">แผนที่</a>
+        <a href="info.html" class="w3-bar-item w3-button">ข้อมูล</a>
+        <a href="contact.html" class="w3-bar-item w3-button">ติดต่อ</a>
+      </div>
+        
+    <div id="map">
+      <div id="googleMap"></div>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("demo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        </script>
       <script src="map.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Vo7mDfgZpDGRANZ9ubMdaxMsKCyhlOc&callback=myMap"></script>
