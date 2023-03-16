@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="th">
-<meta http-equiv="content-type" charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-<head>
-    <title>CUmusicwalk</title>
-    <link rel="icon" type="image/x-icon" href="icon/logo.ico">
-    <link rel="stylesheet" href="style_mobile.css" type="text/css"/>
-    <link rel="stylesheet" href="style_pc.css" type="text/css"/>
-    <link rel="stylesheet" href="w3stylesheet.css" type="text/css">
-</head>
-
-<body>
-    <div class="w3-bar" style="background-color:#F7B5BB;color:#555">
-        <img src="icon/logo.png" class="w3-bar-item logo">
-        <a href="index.html" class="w3-bar-item w3-button w3-hide-small" id="home">หน้าหลัก</a>
-        <a href="map.html" class="w3-bar-item w3-button w3-hide-small ">แผนที่</a>
-        <a href="info.html" class="w3-bar-item w3-button w3-hide-small ">ข้อมูล</a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small ">ติดต่อ</a>
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right  w3-hide-large w3-hide-medium" onclick="myFunction()" style="color:
-        #fff!important">&#9776;</a>
-      </div>
-      
-      <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color:#F7B5BB;color:#555">
-        <a href="index.html" class="w3-bar-item w3-button">หน้าหลัก</a>
-        <a href="map.html" class="w3-bar-item w3-button">แผนที่</a>
-        <a href="info.html" class="w3-bar-item w3-button">ข้อมูล</a>
-        <a href="contact.html" class="w3-bar-item w3-button">ติดต่อ</a>
-      </div>
-      <script>
-        function myFunction() {
-          var x = document.getElementById("demo");
-          if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-          } else { 
-            x.className = x.className.replace(" w3-show", "");
-          }
-        }
-        </script>
-    </body>
+    <meta http-equiv="content-type" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <title>CUmusicwalk</title>
+        <link rel="icon" type="image/x-icon" href="icon/logo.ico">
+        <link rel="stylesheet" href="style_mobile.css" type="text/css"/>
+        <link rel="stylesheet" href="w3stylesheet.css" type="text/css">
+    </head>
+    <body>
+        <div class="w3-bar" style="background-color:#F1E4E5;color:#555">
+            <img src="icon/logo.png" class="w3-bar-item logo">
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-small middle" id="home">หน้าหลัก</a>
+            <a href="map.html" class="w3-bar-item w3-button w3-hide-small middle">แผนที่</a>
+            <a href="info.html" class="w3-bar-item w3-button w3-hide-small middle">ข้อมูล</a>
+            <a href="contact.html" class="w3-bar-item w3-button w3-hide-small middle">ติดต่อ</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right  w3-hide-large w3-hide-medium middle" onclick="myFunction()" style="color:
+            #E4278F!important">&#9776;</a>
+          </div>
+          
+          <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color:#F1E4E5;color:#555">
+            <a href="index.html" class="w3-bar-item w3-button">หน้าหลัก</a>
+            <a href="map.html" class="w3-bar-item w3-button">แผนที่</a>
+            <a href="info.html" class="w3-bar-item w3-button">ข้อมูล</a>
+            <a href="contact.html" class="w3-bar-item w3-button">ติดต่อ</a>
+          </div>
+          
+          <p>This is a test text</p>
+          
+          <script>
+            function myFunction() {
+              var x = document.getElementById("demo");
+              if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+              } else { 
+                x.className = x.className.replace(" w3-show", "");
+              }
+            }
+            </script>
+            
+        </body>
 </html>
