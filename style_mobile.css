@@ -118,6 +118,7 @@ html{box-sizing:border-box}
 	height: 90svh;
 	width: 100vw;
 	margin: -8px;
+	margin-top: 1%;
 	position:static;
 	display: inline-block;
 
