@@ -1,5 +1,5 @@
 ///Coordinates & variables///
-var points = [
+var location = [
   [{lat: 13.735936017497728, lng: 100.53071747155853},"icon/1.png"],
   [{lat: 13.736522929590551, lng: 100.52953254883069},"icon/2.png"],
   [{lat: 13.737257102262152, lng: 100.52858397219916},"icon/3.png"],
@@ -22,6 +22,7 @@ var parking = [
   {lat:13.73930838287045, lng: 100.53458867112415},
   {lat:13.73395076658045, lng: 100.53331841271162}
 ]
+
 var content = [
   '<div class="header"><div id="number"><img src="icon/1.png"></div><div id="name"><h1>อาคารมหามกุฏ</h1><h3>MAHAMAKUT</h3></div><div id="fac"><img src="icon/bench.png"><img src="icon/food.png"><img src="icon/wc.png"></div> </div>'+'<div class="image"><img src = "icon/mahamakut.png"><div class="info"><p>Ho hohoh</p></div></div>',
   '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/4.png"><h1>อาคารจามจุรี 4</h1><h3>CHAMCHURI 4</h3><img id="show-type" src=""><div class="facility"></div></div><div class="info-window-pic"><img src="icon/cham4.png"></div><div class="info-window-content"><div><p>“อาคารจามจุรี 4” เป็นอาคารสำนักงานที่ตั้งอยู่ตรงข้ามหอสมุดกลาง และสามารถเดินเข้ามาจากอาคารจามจุรี 1-2 ผ่านสวน<br>ทางใต้ตึกมีนิทรรศการบุคคลสำคัญที่เคยมาเยือนจุฬา</p></div><button></button></div></div>'
@@ -31,51 +32,23 @@ var content = [
 function myMap() {
   var mapProp= {center:new google.maps.LatLng(13.738351063201533, 100.53043918229304),zoom:17,};
 
-///Marker variables///
+
+///marker variables///
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-//wc
-var wc1 = new google.maps.Marker({map, position: wc[0], icon:"icon/wc.png",});
-var wc2 = new google.maps.Marker({map, position: wc[1], icon:"icon/wc.png",});
-var wc3 = new google.maps.Marker({map, position: wc[2], icon:"icon/wc.png",});
-var wc4 = new google.maps.Marker({map, position: wc[3], icon:"icon/wc.png",});
-var wc5 = new google.maps.Marker({map, position: wc[4], icon:"icon/wc.png",});
-var wc6 = new google.maps.Marker({map, position: wc[5], icon:"icon/wc.png",});
-//parking
-var p1 = new google.maps.Marker({map, position: parking[0], icon:"icon/parking.png",});
-var p2 = new google.maps.Marker({map, position: parking[1], icon:"icon/parking.png",});
-//check points
-var marker1 = new google.maps.Marker({position: points[0][0],map: map,icon:points[0][1],});
-var marker2 = new google.maps.Marker({position: points[1][0],map: map,icon:points[1][1],});
-var marker3 = new google.maps.Marker({position: points[2][0],map: map,icon:points[2][1],});
-var marker4 = new google.maps.Marker({position: points[3][0],map: map,icon:points[3][1],});
-var marker5 = new google.maps.Marker({position: points[4][0],map: map,icon:points[4][1],});
-var marker6 = new google.maps.Marker({position: points[5][0],map: map,icon:points[5][1],});
-var marker7 = new google.maps.Marker({position: points[6][0],map: map,icon:points[6][1],});
-var marker8 = new google.maps.Marker({position: points[7][0],map: map,icon:points[7][1],});
-var marker9 = new google.maps.Marker({position: points[8][0],map: map,icon:points[8][1],});
+var parking_marker = {}
+var wc_marker ={}
+var location_marker = {}
+for (var p in parking){parking_marker[p] =  new google.maps.Marker({map,position: parking[p],icon:"icon/parking.png",});}
+for (var w in wc){wc_marker[w] =  new google.maps.Marker({map,position: wc[w],icon:"icon/wc.png",});}
+for (var l in location){location_marker[l] = new google.maps.Marker({map,position: location[l][0],icon: location[l][1],});}
 
 ///infowindow variables///
-var info_marker1 = new google.maps.InfoWindow({content:content[0],});
-var info_marker2 = new google.maps.InfoWindow({content:content[1],});
-var info_marker3 = new google.maps.InfoWindow({content:content[1],});
-var info_marker4 = new google.maps.InfoWindow({content:content[1],});
-var info_marker5 = new google.maps.InfoWindow({content:content[1],});
-var info_marker6 = new google.maps.InfoWindow({content:content[1],});
-var info_marker7 = new google.maps.InfoWindow({content:content[1],})
-var info_marker8 = new google.maps.InfoWindow({content:content[1],})
-var info_marker9 = new google.maps.InfoWindow({content:content[1],})
+var info1 = new google.maps.InfoWindow({content:content[0],})
+var info4 = new google.maps.InfoWindow({content:content[1],})
 
 ///marker event listener for infowindow///
-marker1.addListener("click", () => {info_marker1.open({anchor: marker1,map,});});
-marker2.addListener("click", () => {info_marker2.open({anchor: marker2,map,});});
-marker3.addListener("click", () => {info_marker3.open({anchor: marker3,map,});});
-marker4.addListener("click", () => {info_marker4.open({anchor: marker4,map,});});
-marker5.addListener("click", () => {info_marker5.open({anchor: marker5,map,});});
-marker6.addListener("click", () => {info_marker6.open({anchor: marker6,map,});});
-marker7.addListener("click", () => {info_marker7.open({anchor: marker7,map,});});
-marker8.addListener("click", () => {info_marker8.open({anchor: marker8,map,});});
-marker9.addListener("click", () => {info_marker9.open({anchor: marker9,map,});});
-
+marker1.addListener("click", () => {info1.open({anchor: marker1,map,});});
+marker4.addListener("click", () => {info4.open({anchor: marker4,map,});});
 
 /*Route Liner
 var i1_1 = {lat: 13.736231863900983, lng: 100.53076185837237}
