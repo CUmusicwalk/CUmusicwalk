@@ -24,7 +24,7 @@ var parking = [
 ]
 var content = [
   '<div class="header"><div id="number"><img src="icon/c.png"></div><div id="name"><h1>อาคารมหามกุฏ</h1><h3>MAHAMAKUT</h3></div><div id="fac"><img src="icon/bench.png"><img src="icon/food.png"><img src="icon/wc.png"></div> </div>'+'<div class="image"><img src = "icon/mahamakut.png"><div class="info"><p>Ho hohoh</p></div></div>',
-  '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/4c.png"><h1>อาคารจามจุรี 4</h1><h3>CHAMCHURI 4</h3><div class="facility"></div></div><div class="info-window-pic"><img src="icon/cham4.png"></div><div class="info-window-content"><img id="show-type" src="icon/Exhibition.png"><p id="type"><<บุคคลสำคัญของโลกที่เคยมาจุฬา>></p><p>“อาคารจามจุรี 4” เป็นอาคารสำนักงานที่ตั้งอยู่ตรงข้ามหอสมุดกลางและสามารถเดินเข้ามาจากถนนพญาไทผ่านอาคารจามจุรี 1 และ 2</p><button><a href="info.html">more</a></button></div></div>']
+  '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/4c.png"><h1>อาคารจามจุรี 4</h1><h3>CHAMCHURI 4</h3><div class="facility"></div></div><div class="info-window-pic"><img src="icon/cham4.png"></div><div class="info-window-content"><img id="show-type" src="icon/Exhibition.png"><p id="type"><บุคคลสำคัญของโลกที่เคยมาจุฬา></p><p>“อาคารจามจุรี 4” เป็นอาคารสำนักงานที่ตั้งอยู่ตรงข้ามหอสมุดกลางและสามารถเดินเข้ามาจากถนนพญาไทผ่านอาคารจามจุรี 1 และ 2</p><button><a href="info.html">more</a></button></div></div>']
 
 ///Main function///
 function myMap() {
