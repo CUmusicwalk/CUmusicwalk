@@ -2,6 +2,7 @@
 ///Main function///
 function myMap() {
   var mapProp= {center:new google.maps.LatLng(13.738351063201533, 100.53043918229304),zoom:17,};
+  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 ///Resizing icon///
 var icon1 = {url:"icon/1.png",scaledSize: new google.maps.Size(40, 70)};
@@ -18,7 +19,6 @@ var icon_parking = {url:"icon/parking.png",scaledSize: new google.maps.Size(30, 
 var icon9_firstaid = {url:"icon/firstaid.png",scaledSize: new google.maps.Size(30, 30)};
 
 ///Marker variables///
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 //wc
 var wc1 = new google.maps.Marker({map, position: wc[0], icon:icon_wc,});
 var wc2 = new google.maps.Marker({map, position: wc[1], icon:icon_wc,});
@@ -42,14 +42,14 @@ var marker9 = new google.maps.Marker({position: points[8],map: map,icon:icon9,})
 
 ///infowindow variables///
 var info_marker1 = new google.maps.InfoWindow({content:content[0],});
-var info_marker2 = new google.maps.InfoWindow({content:content[1],closeBoxUrl:""});
-var info_marker3 = new google.maps.InfoWindow({content:content[1],});
-var info_marker4 = new google.maps.InfoWindow({content:content[1],});
-var info_marker5 = new google.maps.InfoWindow({content:content[1],});
-var info_marker6 = new google.maps.InfoWindow({content:content[1],});
-var info_marker7 = new google.maps.InfoWindow({content:content[1],});
-var info_marker8 = new google.maps.InfoWindow({content:content[1],});
-var info_marker9 = new google.maps.InfoWindow({content:content[1],});
+var info_marker2 = new google.maps.InfoWindow({content:content[1],});
+var info_marker3 = new google.maps.InfoWindow({content:content[2],});
+var info_marker4 = new google.maps.InfoWindow({content:content[3],});
+var info_marker5 = new google.maps.InfoWindow({content:content[4],});
+var info_marker6 = new google.maps.InfoWindow({content:content[5],});
+var info_marker7 = new google.maps.InfoWindow({content:content[6],});
+var info_marker8 = new google.maps.InfoWindow({content:content[7],});
+var info_marker9 = new google.maps.InfoWindow({content:content[8],});
 
 ///marker event listener for infowindow///
 marker1.addListener("click", () => {info_marker1.open({anchor: marker1,map,});});
@@ -153,7 +153,7 @@ const locationButton = document.createElement("button");
 
 locationButton.textContent = "Pan to Current Location";
 locationButton.classList.add("custom-map-control-button");
-map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+map.controls[google.maps.ControlPosition.TOP_RIGHT].push(locationButton);
 locationButton.addEventListener("click", () => {
 // Try HTML5 geolocation.
 if (navigator.geolocation) {

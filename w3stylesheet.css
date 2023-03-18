@@ -185,6 +185,14 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     height: 10%;
     width: auto;
 }
+#show-type2{
+    position:absolute;
+    top: 5%;
+    left: 40%;
+    height: 10%;
+    width: auto;
+}
+
 
 #type{
     position: absolute;
@@ -194,13 +202,31 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     color: #000!important;
 }
 
-.info-window-content p{
+#content{
     position: absolute;
-    top: 25%;
+    top: 20%;
+    left: 0;
+    color:#555;
+}
+#l57{
+    position: absolute;
+    top: 57%;
+    left: 0;
+    color:#555;
+}
+#l49{
+    position: absolute;
+    top: 49%;
     left: 0;
     color:#555;
 }
 
+#l58{
+    position: absolute;
+    top: 58%;
+    left: 0;
+    color:#555;
+}
 .info-window-content button{
     position: absolute;
     top:77.5%;
