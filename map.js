@@ -1,32 +1,3 @@
-///Coordinates & variables///
-var points = [
-  {lat: 13.735936017497728, lng: 100.53071747155853},
-  {lat: 13.736522929590551, lng: 100.52953254883069},
-  {lat: 13.737257102262152, lng: 100.52858397219916},
-  {lat: 13.738885597064707, lng: 100.52844705631053},
-  {lat: 13.740030280173663, lng: 100.52889362961828},
-  {lat: 13.73972712877361, lng: 100.532117338905},
-  {lat: 13.739521656258006, lng: 100.53230795763523},
-  {lat: 13.737094177735804, lng: 100.53186628737458},
-  {lat: 13.736474278162431, lng: 100.53169557601313}
-]
-var wc = [
-  {lat:13.740050754548463, lng: 100.52872753493585},
-  {lat:13.739793738931343, lng: 100.5308531220263},
-  {lat:13.739551620500956, lng: 100.53247570464549},
-  {lat:13.736470878543077, lng: 100.53003143953347},
-  {lat:13.736807854768212, lng: 100.52895388605143},
-  {lat:13.737535545314351, lng: 100.53132312710174}
-]
-var parking = [
-  {lat:13.73930838287045, lng: 100.53458867112415},
-  {lat:13.73395076658045, lng: 100.53331841271162}
-]
-var content = [
-  '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/1c.png"><h1>อาคารมหามกุฏ</h1><h3>MAHAMAKUT</h3><div class="facility"></div></div><div class="info-window-pic"><img src="icon/mahamakut.png"></div><div class="info-window-content"><img id="show-type" src="icon/Registration.png"><p id="type"><จุดลงทะเบียนและรับแผนที่></p><p>“อาคารมหามกุฏ”</p><button><a href="info.html">เพิ่มเติม ></a></button></div></div>',
-  '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/4c.png"><h1>อาคารจามจุรี 4</h1><h3>CHAMCHURI 4</h3><div class="facility"></div></div><div class="info-window-pic"><img src="icon/cham4.png"></div><div class="info-window-content"><img id="show-type" src="icon/Exhibition.png"><p id="type"><บุคคลสำคัญของโลกที่เคยมาจุฬาฯ><br><นิทรรศการภาพสีน้ำประกอบปฏิทิน></p><p style="top:30%">อาคารสำนักงานนี้เดินเข้ามาจากถนนพญาไทผ่านอาคารจามจุรี 1 และ 2 ได้ อยู่ติดกับลานหน้าหอสมุดกลาง ที่ตอนนี้มีดอกกัลปพฤกษ์บานสะพรั่งสวยงาม</p><button><a href="info.html">เพิ่มเติม ></a></button></div></div>'
-]
-
 
 ///Main function///
 function myMap() {
@@ -90,6 +61,9 @@ marker6.addListener("click", () => {info_marker6.open({anchor: marker6,map,});})
 marker7.addListener("click", () => {info_marker7.open({anchor: marker7,map,});});
 marker8.addListener("click", () => {info_marker8.open({anchor: marker8,map,});});
 marker9.addListener("click", () => {info_marker9.open({anchor: marker9,map,});});
+p1.addListener("click", () => {polygon(chula)});
+p2.addListener("click", () => {removePolygon(chula)});
+
 
 google.maps.event.addListener(map, "click", function(event) {
   info_marker1.close();
@@ -104,6 +78,7 @@ google.maps.event.addListener(map, "click", function(event) {
   info_p1.close();
   info_p2.close();
   info_wc1.close();
+  removePolygon(chula);
 });
 /*Route Liner
 var i1_1 = {lat: 13.736231863900983, lng: 100.53076185837237}
@@ -144,7 +119,33 @@ strokeColor:"#09C917",
 strokeOpacity:0.8,
 strokeWeight:5
 });*/
+///Area highlight
 
+var chula = new google.maps.Polygon({
+  path:[
+    {lat:13.73098390764623,lng:100.53357803781358},
+    {lat:13.735814285083151,lng:100.52168044682774},
+    {lat:13.74709542904918,lng:100.52373771853887},
+    {lat:13.74735345594048,lng:100.52411526660316},
+    {lat:13.74532205132821,lng:100.53562684827126},
+    {lat:13.74522121129751,lng:100.53572136464288}],
+  strokeColor:"#F7B5BB",
+  strokeOpacity:0.8,
+  strokeWeight:2,
+  fillColor: "#F7B5BB",
+  fillOpacity: 0.2
+  });
+
+
+
+  function polygon(x){
+    x.setMap(map)
+  }
+  
+  function removePolygon(x){
+    x.setMap(null);
+  }
+  
 ///Location finder///
 infoWindow = new google.maps.InfoWindow();
 
@@ -193,7 +194,4 @@ browserHasGeolocation
 ? "Error: The Geolocation service failed."
 : "Error: Your browser doesn't support geolocation."
 );
-
-/*other coords*/ 
-
 }

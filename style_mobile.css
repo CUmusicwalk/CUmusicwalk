@@ -2,10 +2,9 @@
 	font-family: "chulalongkorn";
 	src: url(Chula-Fonts\CHULALONGKORNReg.otf);
 }
-html{box-sizing:border-box}
 /*@media screen and (max-width: 600px){*/
     header{
-        background-color: #F7B5BB;
+        background-color: #ffffff;
         margin: -8px;
         height:100px;
         width: auto;
@@ -88,10 +87,6 @@ html{box-sizing:border-box}
 		color:#DB5F8E;
     }
 
-    .menu .active{
-        background:#e3e3e3;
-		color:#DB5F8E;
-    }
 
 	/*toggle change*/
 	
@@ -113,81 +108,3 @@ html{box-sizing:border-box}
 /* menu bar */
 
 
-/*google map*/
-#googleMap {
-	height: 90svh;
-	width: 100vw;
-	margin: -8px;
-	margin-top: 1%;
-	position:static;
-	display: inline-block;
-
-}
-
-/*Information Window*/
-.header {
-	background-color: #DB5F8E;
-	color: #ffffff;
-	border-radius: 10px 10px 0 0;
-	width: 500px;
-	height: 100px;
-	position: relative;
-	box-shadow: 0px 5px 5px #6f6f6f4c;
-}
-#number{
-	display: inline;
-	position:absolute;
-	width: fit-content;
-	top:20px;
-	left:25px;
-}
-#name{
-	display: inline;
-	position: absolute;
-	top: 0;
-	left:15%;
-}
-
-#name h1{
-	margin-bottom: 5px;
-}
-#name h3{
-	margin-top: 0;
-}
-
-#fac{
-	position:absolute;
-	right: 0;
-	top:60px;
-}
-#fac img{
-	margin-right: 5px;
-}
-
-
-.image{
-	width: 100%;
-	background-color:#FFE2E7;
-	border-radius: 0 0 10px 10px;
-
-
-}
-.image img{
-	margin-left: 5px;
-	width: 250px;;
-	margin-top: 0px;
-	height: auto;
-}
-.info{
-	position:absolute;
-	background-color: #222;
-	left: 250px;
-	top:125px;
-	width: 250px;
-	height:100px;
-}
-
-.footer{
-	background-color: #ffffff;
-	
-}
