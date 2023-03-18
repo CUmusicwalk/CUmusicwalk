@@ -1,14 +1,14 @@
 ///Coordinates & variables///
 var points = [
-  [{lat: 13.735936017497728, lng: 100.53071747155853},"icon/1.png"],
-  [{lat: 13.736522929590551, lng: 100.52953254883069},"icon/2.png"],
-  [{lat: 13.737257102262152, lng: 100.52858397219916},"icon/3.png"],
-  [{lat: 13.738885597064707, lng: 100.52844705631053},"icon/4.png"],
-  [{lat: 13.740030280173663, lng: 100.52889362961828},"icon/5.png"],
-  [{lat: 13.73972712877361, lng: 100.532117338905},"icon/6.png"],
-  [{lat: 13.739521656258006, lng: 100.53230795763523},"icon/7.png"],
-  [{lat: 13.737094177735804, lng: 100.53186628737458},"icon/8.png"],
-  [{lat: 13.736474278162431, lng: 100.53169557601313},"icon/9.png"]
+  {lat: 13.735936017497728, lng: 100.53071747155853},
+  {lat: 13.736522929590551, lng: 100.52953254883069},
+  {lat: 13.737257102262152, lng: 100.52858397219916},
+  {lat: 13.738885597064707, lng: 100.52844705631053},
+  {lat: 13.740030280173663, lng: 100.52889362961828},
+  {lat: 13.73972712877361, lng: 100.532117338905},
+  {lat: 13.739521656258006, lng: 100.53230795763523},
+  {lat: 13.737094177735804, lng: 100.53186628737458},
+  {lat: 13.736474278162431, lng: 100.53169557601313}
 ]
 var wc = [
   {lat:13.740050754548463, lng: 100.52872753493585},
@@ -23,35 +23,51 @@ var parking = [
   {lat:13.73395076658045, lng: 100.53331841271162}
 ]
 var content = [
-  '<div class="header"><div id="number"><img src="icon/c.png"></div><div id="name"><h1>อาคารมหามกุฏ</h1><h3>MAHAMAKUT</h3></div><div id="fac"><img src="icon/bench.png"><img src="icon/food.png"><img src="icon/wc.png"></div> </div>'+'<div class="image"><img src = "icon/mahamakut.png"><div class="info"><p>Ho hohoh</p></div></div>',
-  '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/4c.png"><h1>อาคารจามจุรี 4</h1><h3>CHAMCHURI 4</h3><div class="facility"></div></div><div class="info-window-pic"><img src="icon/cham4.png"></div><div class="info-window-content"><img id="show-type" src="icon/Exhibition.png"><p id="type"><บุคคลสำคัญของโลกที่เคยมาจุฬา></p><p>“อาคารจามจุรี 4” เป็นอาคารสำนักงานที่ตั้งอยู่ตรงข้ามหอสมุดกลาง<br>และสามารถเดินเข้ามาจากถนนพญาไทผ่านอาคารจามจุรี 1 และ 2 ได้</p><button><a href="info.html">เพิ่มเติม ></a></button></div></div>']
+  '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/1c.png"><h1>อาคารมหามกุฏ</h1><h3>MAHAMAKUT</h3><div class="facility"></div></div><div class="info-window-pic"><img src="icon/mahamakut.png"></div><div class="info-window-content"><img id="show-type" src="icon/Registration.png"><p id="type"><จุดลงทะเบียนและรับแผนที่></p><p>“อาคารมหามกุฏ”</p><button><a href="info.html">เพิ่มเติม ></a></button></div></div>',
+  '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/4c.png"><h1>อาคารจามจุรี 4</h1><h3>CHAMCHURI 4</h3><div class="facility"></div></div><div class="info-window-pic"><img src="icon/cham4.png"></div><div class="info-window-content"><img id="show-type" src="icon/Exhibition.png"><p id="type"><บุคคลสำคัญของโลกที่เคยมาจุฬาฯ><br><นิทรรศการภาพสีน้ำประกอบปฏิทิน></p><p style="top:30%">อาคารสำนักงานนี้เดินเข้ามาจากถนนพญาไทผ่านอาคารจามจุรี 1 และ 2 ได้ อยู่ติดกับลานหน้าหอสมุดกลาง ที่ตอนนี้มีดอกกัลปพฤกษ์บานสะพรั่งสวยงาม</p><button><a href="info.html">เพิ่มเติม ></a></button></div></div>'
+]
+
 
 ///Main function///
 function myMap() {
   var mapProp= {center:new google.maps.LatLng(13.738351063201533, 100.53043918229304),zoom:17,};
 
+///Resizing icon///
+var icon1 = {url:"icon/1.png",scaledSize: new google.maps.Size(40, 70)};
+var icon2 = {url:"icon/2.png",scaledSize: new google.maps.Size(40, 70)};
+var icon3 = {url:"icon/3.png",scaledSize: new google.maps.Size(40, 70)};
+var icon4 = {url:"icon/4.png",scaledSize: new google.maps.Size(40, 70)};
+var icon5 = {url:"icon/5.png",scaledSize: new google.maps.Size(40, 70)};
+var icon6 = {url:"icon/6.png",scaledSize: new google.maps.Size(40, 70)};
+var icon7 = {url:"icon/7.png",scaledSize: new google.maps.Size(40, 70)};
+var icon8 = {url:"icon/8.png",scaledSize: new google.maps.Size(40, 70)};
+var icon9 = {url:"icon/9.png",scaledSize: new google.maps.Size(40, 70)};
+var icon_wc = {url:"icon/wc.png",scaledSize: new google.maps.Size(30, 30)};
+var icon_parking = {url:"icon/parking.png",scaledSize: new google.maps.Size(30, 32)};
+var icon9_firstaid = {url:"icon/firstaid.png",scaledSize: new google.maps.Size(30, 30)};
+
 ///Marker variables///
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 //wc
-var wc1 = new google.maps.Marker({map, position: wc[0], icon:"icon/wc.png",});
-var wc2 = new google.maps.Marker({map, position: wc[1], icon:"icon/wc.png",});
-var wc3 = new google.maps.Marker({map, position: wc[2], icon:"icon/wc.png",});
-var wc4 = new google.maps.Marker({map, position: wc[3], icon:"icon/wc.png",});
-var wc5 = new google.maps.Marker({map, position: wc[4], icon:"icon/wc.png",});
-var wc6 = new google.maps.Marker({map, position: wc[5], icon:"icon/wc.png",});
+var wc1 = new google.maps.Marker({map, position: wc[0], icon:icon_wc,});
+var wc2 = new google.maps.Marker({map, position: wc[1], icon:icon_wc,});
+var wc3 = new google.maps.Marker({map, position: wc[2], icon:icon_wc,});
+var wc4 = new google.maps.Marker({map, position: wc[3], icon:icon_wc,});
+var wc5 = new google.maps.Marker({map, position: wc[4], icon:icon_wc,});
+var wc6 = new google.maps.Marker({map, position: wc[5], icon:icon_wc,});
 //parking
-var p1 = new google.maps.Marker({map, position: parking[0], icon:"icon/parking.png",});
-var p2 = new google.maps.Marker({map, position: parking[1], icon:"icon/parking.png",});
+var p1 = new google.maps.Marker({map, position: parking[0], icon:icon_parking,});
+var p2 = new google.maps.Marker({map, position: parking[1], icon:icon_parking,});
 //check points
-var marker1 = new google.maps.Marker({position: points[0][0],map: map,icon:points[0][1],});
-var marker2 = new google.maps.Marker({position: points[1][0],map: map,icon:points[1][1],});
-var marker3 = new google.maps.Marker({position: points[2][0],map: map,icon:points[2][1],});
-var marker4 = new google.maps.Marker({position: points[3][0],map: map,icon:points[3][1],});
-var marker5 = new google.maps.Marker({position: points[4][0],map: map,icon:points[4][1],});
-var marker6 = new google.maps.Marker({position: points[5][0],map: map,icon:points[5][1],});
-var marker7 = new google.maps.Marker({position: points[6][0],map: map,icon:points[6][1],});
-var marker8 = new google.maps.Marker({position: points[7][0],map: map,icon:points[7][1],});
-var marker9 = new google.maps.Marker({position: points[8][0],map: map,icon:points[8][1],});
+var marker1 = new google.maps.Marker({position: points[0],map: map,icon:icon1,});
+var marker2 = new google.maps.Marker({position: points[1],map: map,icon:icon2,});
+var marker3 = new google.maps.Marker({position: points[2],map: map,icon:icon3,});
+var marker4 = new google.maps.Marker({position: points[3],map: map,icon:icon4,});
+var marker5 = new google.maps.Marker({position: points[4],map: map,icon:icon5,});
+var marker6 = new google.maps.Marker({position: points[5],map: map,icon:icon6,});
+var marker7 = new google.maps.Marker({position: points[6],map: map,icon:icon7,});
+var marker8 = new google.maps.Marker({position: points[7],map: map,icon:icon8,});
+var marker9 = new google.maps.Marker({position: points[8],map: map,icon:icon9,});
 
 ///infowindow variables///
 var info_marker1 = new google.maps.InfoWindow({content:content[0],});

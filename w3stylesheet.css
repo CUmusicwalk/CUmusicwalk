@@ -184,17 +184,26 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     left: 0;
     height: 10%;
     width: auto;
-
 }
+
+#type{
+    position: absolute;
+    top: 10%!important;
+    font-style: oblique!important;
+    left: 0;
+    color: #000!important;
+}
+
 .info-window-content p{
     position: absolute;
     top: 25%;
     left: 0;
+    color:#555;
 }
 
 .info-window-content button{
     position: absolute;
-    top:75%;
+    top:77.5%;
     left:57.5%;
     width: 60px;
     border-radius: 8px;
@@ -207,10 +216,4 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .info-window-content button a{
     color: #000;
     text-decoration: none;
-}
-#type{
-    position: absolute;
-    top: 10%!important;
-    font-style: oblique!important;
-    left: 0;
 }
