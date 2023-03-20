@@ -78,4 +78,3 @@ var p8_9 = [points[7],points[8]];
 var parking1_p1 = [parking[0],points[6]];
 var parking2_p1 = [points[1],points[0]];
 
-    
