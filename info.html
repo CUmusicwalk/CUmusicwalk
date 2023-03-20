@@ -5,8 +5,7 @@
     <head>
         <title>CUmusicwalk</title>
         <link rel="icon" type="image/x-icon" href="icon/logo.ico">
-        <link rel="stylesheet" href="style_mobile.css" type="text/css"/>
-        <link rel="stylesheet" href="w3stylesheet.css" type="text/css">
+        <link rel="stylesheet" href="styles.css" type="text/css">
     </head>
     <body>
       <div class="w3-bar" style="background-color:#fff;color:#555;font-size: 15px!important;">
@@ -25,8 +24,21 @@
         <a href="info.html" class="w3-bar-item w3-button">ข้อมูล</a>
         <a href="contact.html" class="w3-bar-item w3-button">ติดต่อ</a>
       </div>
-          
-          <div id="map"><div id="googleMap"></div></div>
+      
+      <div class="side_nav">
+        <ul>
+          <li>จุดเช็คอิน</li>
+          <li>จุดน่าสนใจ</li>
+          <li>การดินทาง</li>
+          <li>ตาราง</li>
+          <li>ร้านค้า</li>
+        </ul>
+      </div>
+      <div class="carousel" id="main_spot"></div>
+      <div class="carousel" id="other_interest_points"></div>
+      <div class="carousel" id="access"></div>
+      <div id="bandnschedules"></div>
+      <div id="shops"></div>
           
           <script>
             function myFunction() {
@@ -38,8 +50,6 @@
               }
             }
             </script>
-            <script src="map.js"></script>
-            <script src="data.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Vo7mDfgZpDGRANZ9ubMdaxMsKCyhlOc&callback=myMap"></script>
+
         </body>
 </html>
