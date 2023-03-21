@@ -93,7 +93,7 @@ body{background-color: #efefef; min-height: 100svh;}
         margin-top: -25px;
     }
     #link_alumni{
-        background-image: url("image/menu_4.png");
+        background-image: url("image/4.png");
         background-size: cover;
         background-position: center; 
         width: 300px;
@@ -134,7 +134,7 @@ body{background-color: #efefef; min-height: 100svh;}
         position: relative;
     }
     #link_alumni{
-        background-image: url("image/menu_4.png");
+        background-image: url("image/4.png");
         background-size: cover;
         background-position: center; 
         width: 30svh;
