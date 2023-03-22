@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="th">
-    <meta http-equiv="content-type" charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <head>
-        <title>CUmusicwalk</title>
-        <link rel="icon" type="image/x-icon" href="icon/logo.ico">
-        <link rel="stylesheet" href="styles.css" type="text/css">
-    </head>
-    <body>
-        <div class="w3-bar" style="background-color:#fff;color:#555;font-size: 15px;">
-            <img src="icon/logo.png" class="w3-bar-item logo">
-            <a href="main.html" class="w3-bar-item w3-button w3-hide-small middle selected" id="home">หน้าหลัก</a>
-            <a href="index.html" class="w3-bar-item w3-button w3-hide-small middle">แผนที่</a>
-            <a href="info.html" class="w3-bar-item w3-button w3-hide-small middle">ข้อมูล</a>
-            <a href="contact.html" class="w3-bar-item w3-button w3-hide-small middle">ติดต่อ/เสนอแนะ</a>
-            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right  w3-hide-large w3-hide-medium" onclick="myFunction()" style="color:
-            #E4278F!important; font-size: 30px;">&#9776;</a>
-          </div>
-          
-          <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color:#fff;color:#555; font-size: 18px;">
-            <a href="main.html" class="w3-bar-item w3-button selected">หน้าหลัก</a>
-            <a href="index.html" class="w3-bar-item w3-button">แผนที่</a>
-            <a href="info.html" class="w3-bar-item w3-button">ข้อมูล</a>
-            <a href="contact.html" class="w3-bar-item w3-button">ติดต่อ/เสนอแนะ</a>
-          </div>
-          
-          
-          <div class="greeting">
-            <h3 class="mini_header">ยินดีต้อนรับสู่งานคืนสู่เหย้าจุฬาฯ 106</h3>
-            <div class="link_page" id="link_alumni" onclick="window.open(alumni,'_blank')"   target='_blank'></div>
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat lobortis lorem, ac feugiat dui aliquet quis. Nulla vel scelerisque velit, quis suscipit massa. Vestibulum imperdiet mauris sem, ut finibus nulla suscipit id. Nunc pellentesque accumsan ligula vel aliquet. Aliquam lobortis elementum magna nec sodales. Pellentesque blandit erat sit amet egestas faucibus. Ut ac purus eleifend, pulvinar justo eget, pulvinar metus.</p>
-            <h3 class="mini_header">หน้าที่เกี่ยวข้อง </h3>
-          </div>
-          
-          <div class="links">
-          <div class="link_page" id="link_map" onclick="location.href='index.html'"></div>
-          <div class="link_page" id="link_info" onclick="location.href='info.html'"></div>
-            <div class="link_page" id="link_contact" onclick="location.href='contact.html'"></div>
-            
-            </div>
-          
-        <div class="footer">
-            <p>เว็บไซต์นี้จัดทำโดยทีมงาน walkable.bkk</p>
-          </div>
-          
-          <script>
-            function myFunction() {
-              var x = document.getElementById("demo");
-              if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-              } else { 
-                x.className = x.className.replace(" w3-show", "");
-              }
-            }
+<meta http-equiv="content-type" charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-            var alumni = "https://www.facebook.com/ChulaAlumni/"
+<head>
+  <title>CUmusicwalk</title>
+  <link rel="icon" type="image/x-icon" href="icon/logo.ico">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
 
-            </script>
-            
-        </body>
+<body>
+<!--Menu bar-->    
+<div class="w3-bar" style="background-color:#fff;color:#555;font-size: 15px;">
+  <img src="icon/logo.png" class="w3-bar-item logo">
+  <a href="main.html" class="w3-bar-item w3-button w3-hide-small middle selected" id="home">หน้าหลัก</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-hide-small middle">แผนที่</a>
+  <a href="info.html" class="w3-bar-item w3-button w3-hide-small middle">ข้อมูล</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-hide-small middle">ติดต่อ/เสนอแนะ</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right  w3-hide-large w3-hide-medium" onclick="myFunction()" style="color:#E4278F!important; font-size: 30px;">&#9776;</a>
+</div>
+<div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color:#fff;color:#555; font-size: 18px;">
+  <a href="main.html" class="w3-bar-item w3-button selected">หน้าหลัก</a>
+  <a href="index.html" class="w3-bar-item w3-button">แผนที่</a>
+  <a href="info.html" class="w3-bar-item w3-button">ข้อมูล</a>
+  <a href="contact.html" class="w3-bar-item w3-button">ติดต่อ/เสนอแนะ</a>
+</div>
+
+<!--Greeting section-->
+<div class="greeting">
+  <h3 class="mini_header">ยินดีต้อนรับสู่งานคืนสู่เหย้าจุฬาฯ 106</h3>
+  <div class="link_page" id="link_alumni" onclick="window.open(alumni,'_blank')"   target='_blank'></div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat lobortis lorem, ac feugiat dui aliquet quis. Nulla vel scelerisque velit, quis suscipit massa. Vestibulum imperdiet mauris sem, ut finibus nulla suscipit id. Nunc pellentesque accumsan ligula vel aliquet. Aliquam lobortis elementum magna nec sodales. Pellentesque blandit erat sit amet egestas faucibus. Ut ac purus eleifend, pulvinar justo eget, pulvinar metus.</p>
+</div>
+
+<!--Related pages section-->
+<h3 class="mini_header">หน้าที่เกี่ยวข้อง </h3>
+<div class="links">
+  <div class="link_page" id="link_map" onclick="location.href='index.html'"></div>
+  <div class="link_page" id="link_info" onclick="location.href='info.html'"></div>
+  <div class="link_page" id="link_contact" onclick="location.href='contact.html'"></div>
+</div>
+       
+<!--Footer-->
+<div class="footer">
+  <p>เว็บไซต์นี้จัดทำโดยทีมงาน <a href="https://www.instagram.com/walkable.bkk/" target="_blank" style="text-decoration: none;color:black;">walkable.bkk</a></p>
+</div>
+         
+<!--Javascript-->
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+var alumni = "https://www.facebook.com/ChulaAlumni/"
+</script>
+</body>
 </html>

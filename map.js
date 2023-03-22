@@ -28,6 +28,8 @@ var wc3 = new google.maps.Marker({map, position: wc[2], icon:icon_wc,});
 var wc4 = new google.maps.Marker({map, position: wc[3], icon:icon_wc,});
 var wc5 = new google.maps.Marker({map, position: wc[4], icon:icon_wc,});
 var wc6 = new google.maps.Marker({map, position: wc[5], icon:icon_wc,});
+var wc7 = new google.maps.Marker({map, position: wc[6], icon:icon_wc,});
+var wc8 = new google.maps.Marker({map, position: wc[7], icon:icon_wc,});
 //parking
 var p1 = new google.maps.Marker({map, position: parking[0], icon:icon_parking,});
 var p2 = new google.maps.Marker({map, position: parking[1], icon:icon_parking,});
@@ -59,15 +61,21 @@ var info_marker6 = new google.maps.InfoWindow({content:content[5],});
 var info_marker7 = new google.maps.InfoWindow({content:content[6],});
 var info_marker8 = new google.maps.InfoWindow({content:content[7],});
 var info_marker9 = new google.maps.InfoWindow({content:content[8],});
-
 var info_p1 = new google.maps.InfoWindow({content:content_parking[0],});
 var info_p2 = new google.maps.InfoWindow({content:content_parking[1],});
-
-var info_f1 = new google.maps.InfoWindow({content:content_firstaid[0],});
-//var info_f2 = new google.maps.InfoWindow({content:content_firstaid[0],});
-//var info_f3 = new google.maps.InfoWindow({content:content_firstaid[0],});
+var info_f = new google.maps.InfoWindow({content:content_firstaid[0],});
+var info_f1 = new google.maps.InfoWindow({content:content_firstaid[0] + '<br>จุดกิจกรรม CPR',});
+var info_wc1 = new google.maps.InfoWindow({content:content_wc[0],});
+var info_wc2 = new google.maps.InfoWindow({content:content_wc[1],});
+var info_wc3 = new google.maps.InfoWindow({content:content_wc[2],});
+var info_wc4 = new google.maps.InfoWindow({content:content_wc[3],});
+var info_wc5 = new google.maps.InfoWindow({content:content_wc[4],});
+var info_wc6 = new google.maps.InfoWindow({content:content_wc[5],});
+var info_wc7 = new google.maps.InfoWindow({content:content_wc[6],});
+var info_wc8 = new google.maps.InfoWindow({content:content_wc[7],});
 
 ///Marker event listener for infowindow///
+//for checkin
 marker1.addListener("click", () => {info_marker1.open({anchor: marker1,map,});});
 marker2.addListener("click", () => {info_marker2.open({anchor: marker2,map,});});
 marker3.addListener("click", () => {info_marker3.open({anchor: marker3,map,});});
@@ -77,13 +85,23 @@ marker6.addListener("click", () => {info_marker6.open({anchor: marker6,map,});})
 marker7.addListener("click", () => {info_marker7.open({anchor: marker7,map,});});
 marker8.addListener("click", () => {info_marker8.open({anchor: marker8,map,});});
 marker9.addListener("click", () => {info_marker9.open({anchor: marker9,map,});});
-
+//for parking
 p1.addListener("click", () => {info_p1.open({anchor: p1,map,})});
 p2.addListener("click", () => {info_p2.open({anchor: p2,map,})});
-
-f1.addListener("click", () => {info_f1.open({anchor: f1,map,})});
-f2.addListener("click", () => {info_f1.open({anchor: f2,map,})});
+//for firstaid
+f1.addListener("click", () => {info_f.open({anchor: f1,map,})});
+f2.addListener("click", () => {info_f.open({anchor: f2,map,})});
 f3.addListener("click", () => {info_f1.open({anchor: f3,map,})});
+//for wc
+wc1.addListener("click", () => {info_wc1.open({anchor: wc1,map,})});
+wc2.addListener("click", () => {info_wc2.open({anchor: wc2,map,})});
+wc3.addListener("click", () => {info_wc3.open({anchor: wc3,map,})});
+wc4.addListener("click", () => {info_wc4.open({anchor: wc4,map,})});
+wc5.addListener("click", () => {info_wc5.open({anchor: wc5,map,})});
+wc6.addListener("click", () => {info_wc6.open({anchor: wc6,map,})});
+wc7.addListener("click", () => {info_wc7.open({anchor: wc7,map,})});
+wc8.addListener("click", () => {info_wc8.open({anchor: wc8,map,})});
+//for other icon
 
 ///Close all infowindows///
 google.maps.event.addListener(map, "click", function(event) {
