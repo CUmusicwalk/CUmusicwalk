@@ -368,8 +368,8 @@ button{cursor: pointer;}
     }
     .polaroid_inner{
         position: relative;
-        width: 100%;
-        height: 100%;
+        width: 300px;
+        height: 400px;
         text-align: center;
         transition: transform 0.6s;
         transform-style: preserve-3d;
@@ -381,8 +381,8 @@ button{cursor: pointer;}
 
     .polaroid_front{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 400px;
         background-color: #ffffff;
         box-shadow: #c0c0c0 0px 0px 20px;
         margin-bottom: 10px;
@@ -393,13 +393,13 @@ button{cursor: pointer;}
         filter: grayscale(80%) sepia(10%);
         
     }
-    .polaroid_front img{ margin-top: 25px;
+    .polaroid_front img{ 
+        margin-top: 25px;
         width:250px;
         height:275px;
         box-shadow: inset 0 0 10px #555;
         background-image: url("image/clock.jpg");
-        
-        background-size: 250px 270px;
+        background-size: 250px 275px;
     }
     .polaroid_front:hover{
         transition: all 0.35s;
@@ -450,7 +450,7 @@ button{cursor: pointer;}
     #our_contact{
         background-color: #ffffff;
         width: 80%;
-        height: 150px;
+        height: 350px;
         margin-bottom: 10px;
         padding-left: 10px;
         box-shadow: #c0c0c0 5px 5px 5px;

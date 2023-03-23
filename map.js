@@ -17,8 +17,11 @@ var icon_wc = {url:"icon/wc.png",scaledSize: new google.maps.Size(30, 30)};
 var icon_parking = {url:"icon/parking.png",scaledSize: new google.maps.Size(30, 32)};
 var icon_firstaid = {url:"icon/firstaid.png",scaledSize: new google.maps.Size(30, 30)};
 var icon_pos = {url:"icon/pos.png",scaledSize:new google.maps.Size(30,30)};
-var icon_pinkmarket = {url:"icon/pink.png",scaledSize:new google.maps.Size(50,50)};
-var icon_i1 = {url:"icon/sala.png",scaledSize:new google.maps.Size(60,40)};
+var icon_pinkmarket = {url:"icon/pink_market.png",scaledSize:new google.maps.Size(80,75)};
+var icon_o1 = {url:"icon/statue.png",scaledSize:new google.maps.Size(60,60)};
+var icon_o2 = {url:"icon/clock.png",scaledSize:new google.maps.Size(30,50)};
+var icon_o3 = {url:"icon/ok.png",scaledSize:new google.maps.Size(40,45)};
+var icon_o4 = {url:"icon/sala.png",scaledSize:new google.maps.Size(60,40)};
 
 ///Marker variables///
 //wc
@@ -48,8 +51,11 @@ var f1 = new google.maps.Marker({position: firstaid[0],map,icon:icon_firstaid,})
 var f2 = new google.maps.Marker({position: firstaid[1],map,icon:icon_firstaid,});
 var f3 = new google.maps.Marker({position: firstaid[2],map,icon:icon_firstaid,});
 //other icon
-var pinkmarket = new google.maps.Marker({position: other[0],map,icon:icon_pinkmarket,});
-var i1 = new google.maps.Marker({position: {lat:13.735527784062258,lng:100.53133815627753},map,icon:icon_i1,});
+var pinkmarket = new google.maps.Marker({position:other[0],map,icon:icon_pinkmarket,});
+var o1 = new google.maps.Marker({position:other[1],map,icon:icon_o1,});
+var o2 = new google.maps.Marker({position:other[2],map,icon:icon_o2,});
+var o3 = new google.maps.Marker({position:other[3],map,icon:icon_o3,});
+var o4 = new google.maps.Marker({position:other[4],map,icon:icon_o4,});
 
 ///infowindow variables///
 var info_marker1 = new google.maps.InfoWindow({content:content[0],});

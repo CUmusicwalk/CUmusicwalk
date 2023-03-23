@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <style>html, body {
+    padding: 0;
+    margin: 0;
+  }
+  html {
+    height: 100vh;
+  }
+  body {
+    height: 100vh;
+  }
+  .carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+  .carousel__list {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    perspective: 300px;
+  }
+  .carousel__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0px;
+    width: 300px;
+    height: 400px;
+    background-color: transparent;
+    perspective: 1000px;
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+    position: absolute;
+    transition: all 0.3s ease-in;
+  }
+
+  .carousel__item[data-pos="0"] {
+    z-index: 5;
+  }
+  .carousel__item[data-pos="-1"], .carousel__item[data-pos="1"] {
+    filter: blur(1px) grayscale(10%);
+  }
+  .carousel__item[data-pos="-1"] {
+    transform: translateX(-60%) scale(0.9);
+    z-index: 4;
+  }
+  .carousel__item[data-pos="1"] {
+    transform: translateX(60%) scale(0.9);
+    z-index: 4;
+  }
+  .carousel__item[data-pos="-2"], .carousel__item[data-pos="2"] {
+    filter: blur(3px) grayscale(20%);
+  }
+  .carousel__item[data-pos="-2"] {
+    transform: translateX(-100%) scale(0.8);
+    z-index: 3;
+  }
+  .carousel__item[data-pos="2"] {
+    transform: translateX(100%) scale(0.8);
+    z-index: 3;
+  }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="carousel__list">
+      <div class="carousel__item" onclick="myFunction('id')" data-pos="-2">
+        <div class="flip-card-inner" id="id">
+        <div class="flip-card-front">
+          <img src="image/clock.jpg" alt="Avatar">
+          <h3>หอนาฬิกา</h3>
+          <p>คลิ้กเพื่อดูข้อมูล</p>
+          <div class="inner-shadow"></div>
+        </div>
+        <div class="flip-card-back">
+          <h1>หอนาฬิกา SEIKO</h1> 
+            <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
+            <p>Architect & Engineer</p> 
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel__item" data-pos="-1">2</div>
+      <div class="carousel__item" data-pos="0">3</div>
+      <div class="carousel__item" data-pos="1">4</div>
+      <div class="carousel__item" data-pos="2">5</div>
+    </div>
+  </div>
+  <script>
+    function myFunction(x){
+        var a = document.getElementById(x)
+        a.classList.toggle("card-flipped");}
+  const state = {};
+    const carouselList = document.querySelector('.carousel__list');
+    const carouselItems = document.querySelectorAll('.carousel__item');
+    const elems = Array.from(carouselItems);
+    
+    carouselList.addEventListener('click', function (event) {
+      var newActive = event.target;
+      var isItem = newActive.closest('.carousel__item');
+    
+      if (!isItem || newActive.classList.contains('carousel__item_active')) {
+        return;
+      };
+      
+      update(newActive);
+    });
+    
+    const update = function(newActive) {
+      const newActivePos = newActive.dataset.pos;
+    
+      const current = elems.find((elem) => elem.dataset.pos == 0);
+      const prev = elems.find((elem) => elem.dataset.pos == -1);
+      const next = elems.find((elem) => elem.dataset.pos == 1);
+      const first = elems.find((elem) => elem.dataset.pos == -2);
+      const last = elems.find((elem) => elem.dataset.pos == 2);
+      
+      current.classList.remove('carousel__item_active');
+      
+      [current, prev, next, first, last].forEach(item => {
+        var itemPos = item.dataset.pos;
+    
+        item.dataset.pos = getPos(itemPos, newActivePos)
+      });
+    };
+    
+    const getPos = function (current, active) {
+      const diff = current - active;
+    
+      if (Math.abs(current - active) > 2) {
+        return -current
+      }
+    
+      return diff;
+    }</script>
+</body>
+</html>

@@ -36,7 +36,11 @@ var firstaid = [
     {lat:13.737330841360821, lng:100.53217228240115}
   ]
 var other = [
-    {lat:13.738541256552246,lng: 100.53100937242753}
+    {lat:13.73831165461666,lng: 100.53095990139335},
+    {lat:13.738408247538016,lng:100.53169698332225},
+    {lat:13.73739091222374,lng:100.53192698522354},
+    {lat:13.739579273331067,lng:100.52820558062041},
+    {lat:13.73897956952879,lng:100.52771284014392}
 ]
   var content = [
     '<div class="info-window"><div class="info-window-header"><img id="checkin" src="icon/1c.png"><h1>อาคารมหามกุฏ</h1><h3>MAHAMAKUT (พ.ศ. 2546)</h3><div class="facility"></div></div><div class="info-window-pic"><img src="image/mahamakut.png"></div><div class="info-window-content"><img id="show-type" src="icon/Registration.png"><p id="type"><จุดลงทะเบียนและรับแผนที่></p><p id="content">อาคารเรียนและปฏิบัติของคณะวิทยาศาสตร์ และเป็นอาคารที่สูงที่สุดในจุฬาฯด้วยความสูงกว่า 85 เมตร<br><br>*ลงทะเบียนได้ที่บริเวณใต้อาคาร*</p><button><a href="info.html">เพิ่มเติม ></a></button></div></div>',
