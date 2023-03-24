@@ -140,7 +140,7 @@ function removeMarker(x){x.setMap(null);}
 const toggleareaButton = document.createElement("button");
 toggleareaButton.textContent = "toggle event area";
 toggleareaButton.classList.add("custom-map-control-button");
-map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toggleareaButton);
+//map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toggleareaButton);
 toggleareaButton.addEventListener("click", () => {
   if(chula.getMap() == map){
     removePolygon(chula)
@@ -153,7 +153,7 @@ toggleareaButton.addEventListener("click", () => {
 const toggleMarker = document.createElement("button");
 toggleMarker.textContent = "toggle marker";
 toggleMarker.classList.add("custom-map-control-button");
-map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toggleMarker);
+//map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toggleMarker);
 toggleMarker.addEventListener("click", () => {
   if(marker1.getMap() == map){
     removeMarker(marker1);
@@ -217,18 +217,20 @@ toggleMarker.addEventListener("click", () => {
 ///Location control///
 //Pan to event area
 const EventlocationButton = document.createElement("button");
-EventlocationButton.textContent = "Pan to event area";
+EventlocationButton.textContent = "ตำแหน่งงาน";
+EventlocationButton.style.fontFamily = "chula";
 EventlocationButton.classList.add("custom-map-control-button");
-map.controls[google.maps.ControlPosition.TOP_CENTER].push(EventlocationButton);
+map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(EventlocationButton);
 EventlocationButton.addEventListener("click", () => {
 map.panTo(center);}
 );
   
 //Location finder
 const locationButton = document.createElement("button");
-locationButton.textContent = "Pan to Current Location";
+locationButton.textContent = "ตำแหน่งของคุณ";
+locationButton.style.fontFamily = "chula";
 locationButton.classList.add("custom-map-control-button");
-map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(locationButton);
 locationButton.addEventListener("click", () => {
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(
@@ -253,7 +255,13 @@ var UPos = new google.maps.Marker({position: pos,map: map,icon:icon_pos,animatio
   //: "Error: Your browser doesn't support geolocation."
   //);
   //}
-  
+// Create the DIV to hold the control.
+const customControlDiv = document.createElement("div");
+customControlDiv.classList.add("map-div");
+
+// Append the control to the DIV.
+centerControlDiv.appendChild(EventlocationButton,locationButton);
+map.controls[google.maps.ControlPosition.TOP_LEFT].push(customControlDiv);
 //end of main func
 }
 
