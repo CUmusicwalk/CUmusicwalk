@@ -52,10 +52,10 @@ var f2 = new google.maps.Marker({position: firstaid[1],map,icon:icon_firstaid,})
 var f3 = new google.maps.Marker({position: firstaid[2],map,icon:icon_firstaid,});
 //other icon
 var pinkmarket = new google.maps.Marker({position:other[0],map,icon:icon_pinkmarket,});
-var o1 = new google.maps.Marker({position:other[1],map,icon:icon_o1,});
-var o2 = new google.maps.Marker({position:other[2],map,icon:icon_o2,});
-var o3 = new google.maps.Marker({position:other[3],map,icon:icon_o3,});
-var o4 = new google.maps.Marker({position:other[4],map,icon:icon_o4,});
+//var o1 = new google.maps.Marker({position:other[1],map,icon:icon_o1,});
+//var o2 = new google.maps.Marker({position:other[2],map,icon:icon_o2,});
+//var o3 = new google.maps.Marker({position:other[3],map,icon:icon_o3,});
+//var o4 = new google.maps.Marker({position:other[4],map,icon:icon_o4,});
 
 ///infowindow variables///
 var info_marker1 = new google.maps.InfoWindow({content:content[0],});
@@ -67,6 +67,7 @@ var info_marker6 = new google.maps.InfoWindow({content:content[5],});
 var info_marker7 = new google.maps.InfoWindow({content:content[6],});
 var info_marker8 = new google.maps.InfoWindow({content:content[7],});
 var info_marker9 = new google.maps.InfoWindow({content:content[8],});
+var info_pinkmarket = new google.maps.InfoWindow({content:content[9],});
 var info_p1 = new google.maps.InfoWindow({content:content_parking[0],});
 var info_p2 = new google.maps.InfoWindow({content:content_parking[1],});
 var info_f = new google.maps.InfoWindow({content:content_firstaid[0],});
@@ -91,6 +92,7 @@ marker6.addListener("click", () => {info_marker6.open({anchor: marker6,map,});})
 marker7.addListener("click", () => {info_marker7.open({anchor: marker7,map,});});
 marker8.addListener("click", () => {info_marker8.open({anchor: marker8,map,});});
 marker9.addListener("click", () => {info_marker9.open({anchor: marker9,map,});});
+pinkmarket.addListener("click", () => {info_pinkmarket.open({anchor: pinkmarket,map,});});
 //for parking
 p1.addListener("click", () => {info_p1.open({anchor: p1,map,})});
 p2.addListener("click", () => {info_p2.open({anchor: p2,map,})});
@@ -113,12 +115,18 @@ wc8.addListener("click", () => {info_wc8.open({anchor: wc8,map,})});
 google.maps.event.addListener(map, "click", function(event) {
   info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
   info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
-  removePolygon(chula);
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close(); removePolygon(chula);
 });
 
 ///Area highlight///
 var chula = new google.maps.Polygon({map,path:cu_area,strokeColor:"#F7B5BB",strokeOpacity:0.8,strokeWeight:2,fillColor: "#F7B5BB",fillOpacity: 0.2});
-
+chula.addListener("click", () => {
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close();
+})
 ///Route highlight///
 var r1_2 = new google.maps.Polyline({path:p1_2,map:map,strokeColor:"#E4278F",strokeOpacity:0.8,strokeWeight:10});
 var r2_3 = new google.maps.Polyline({path:p2_3,map:map,strokeColor:"#E4278F",strokeOpacity:0.8,strokeWeight:10});
@@ -217,7 +225,7 @@ toggleMarker.addEventListener("click", () => {
 ///Location control///
 //Pan to event area
 const EventlocationButton = document.createElement("button");
-EventlocationButton.textContent = "ตำแหน่งงาน";
+EventlocationButton.textContent = "พื้นที่งาน";
 EventlocationButton.style.fontFamily = "chula";
 EventlocationButton.classList.add("custom-map-control-button");
 map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(EventlocationButton);
@@ -231,13 +239,15 @@ locationButton.textContent = "ตำแหน่งของคุณ";
 locationButton.style.fontFamily = "chula";
 locationButton.classList.add("custom-map-control-button");
 map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(locationButton);
+var Upos = new google.maps.Marker({position: center,map: null,icon:icon_pos,animation:google.maps.Animation.BOUNCE});
 locationButton.addEventListener("click", () => {
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(
 (position) => {
 const pos = {lat: position.coords.latitude,lng: position.coords.longitude,};
 map.setCenter(pos);
-var UPos = new google.maps.Marker({position: pos,map: map,icon:icon_pos,animation:google.maps.Animation.BOUNCE});
+Upos.setPosition(pos);
+Upos.setMap(map);
 },
 //() => {handleLocationError(true, infoWindow, map.getCenter());}
 );

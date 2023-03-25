@@ -28,24 +28,29 @@
 
 <!--Information section-->
 <!--Building info-->
-<h3 class="mini_header">เรื่องน่ารู้ อาคารในจุฬาฯ</h3>
-<div class="mini_menu">
-  <button onclick="toggleCarousel()">สถานที่เช็คอิน</button>
-  <button onclick="toggleCarousel()">สถานที่อื่นๆ</button>
-</div>
+
+
 
 <div id="carousel_checkpoint">
+  <h3 class="mini_header" id="info-header-1">เรื่องน่ารู้ อาคารในจุฬาฯ (จุดเช็คอิน)</h3>
+  <div class="mini_menu">
+    <button class="checkpoint-button" disabled="true">สถานที่เช็คอิน</button>
+    <button onclick="selectPage('other')" class="other-button">สถานที่อื่นๆ</button>
+    <button onclick="selectPage('bands')" class="band-button">วงดนตรี</button>
+    <button onclick="selectPage('shops')" class="shop-button">ร้านค้า</button>
+    <button onclick="selectPage('access')" class="access-button">เดินทาง</button>
+  </div>
 <!--Polaroid-->
 <div id="flip-card-container1">
 <button class="prev" disabled="true">&#10094;</button>
 <!--Image1-->
-<div class="flip-card" onclick="myFunction('id1')">
+<div class="flip-card" onclick="cardFlip('id1')">
 <div class="flip-card-inner" id="id1">
 <div class="flip-card-front">
   <img src="image/c1.jpg" alt="mahamakut">
   <h3>อาคารมหามกุฏ</h3>
   <p>คลิ้กเพื่อดูข้อมูล</p>
-  <div class="inner-shadow"></div>
+  <div class="inner-shadow"><h5>จุดเช็คอิน 1/9</h5></div>
 </div>
 <div class="flip-card-back">
   <h3>อาคารมหามกุฏ</h3>
@@ -54,16 +59,15 @@
   <p class="info">สถาปนิก: รศ.ดร. ฐานิศวร์ เจริญพงษ์ <br>รศ.สมสิทธิ์ นิตยะ<br>ผศ. ปราโมทย์ แตงเที่ยง</p>
   <p class="info">"อาคารมหามกุฏ" เป็นอาคารเรียนและปฏิบัติของคณะวิทยาศาสตร์ และเป็นอาคารที่สูงที่สุดในจุฬาฯ ด้วยความสูงกว่า 85 เมตร</p>
   <p class="info">จากชั้นบนๆของตึกมหามกุฏ จะมองเห็นศาลาพระเกี้ยวและอาคารจุลจักรพงษ์เป็นรูปตราพระเกี้ยวและฐานได้</p>
-  <img src="" class="flip-card-back-img"> 
 </div></div></div>
 <!--Image2-->
-<div class="flip-card" onclick="myFunction('id2')">
+<div class="flip-card" onclick="cardFlip('id2')">
   <div class="flip-card-inner" id="id2">
   <div class="flip-card-front">
     <img src="image/c2.jpg" alt="Tunnel">
     <h3>อุโมงค์ลอดถนนพญาไท</h3>
     <p>คลิ้กเพื่อดูข้อมูล</p>
-    <div class="inner-shadow"></div>
+    <div class="inner-shadow"><h5>จุดเช็คอิน 2/9</h5></div>
   </div>
   <div class="flip-card-back">
     <h3>อุโมงค์ลอดถนนพญาไท</h3>
@@ -74,13 +78,13 @@
       เพื่อเชื่อมเขตมหาวิทยาลัยทั้งสองฝั่ง และให้นิสิต นักเรียนและประชาชนสามารถข้ามถนนพญาไทได้อย่างปลอดภัย</p>
   </div></div></div>
 <!--Image3-->
-<div class="flip-card" onclick="myFunction('id3')">
+<div class="flip-card" onclick="cardFlip('id3')">
   <div class="flip-card-inner" id="id3">
   <div class="flip-card-front">
     <img src="image/c3.jpg" alt="edu">
     <h3>ลานไทร ครุศาสตร์</h3>
     <p>คลิ้กเพื่อดูข้อมูล</p>
-    <div class="inner-shadow"></div>
+    <div class="inner-shadow"><h5>จุดเช็คอิน 3/9</h5></div>
   </div>
   <div class="flip-card-back">
     <h3>คณะครุศาสตร์</h3> 
@@ -94,13 +98,13 @@
 <div id="flip-card-container2">
   <button class="prev" onclick = "prevSlideMain()">&#10094;</button>
   <!--Image4-->
-  <div class="flip-card" onclick="myFunction('id4')">
+  <div class="flip-card" onclick="cardFlip('id4')">
   <div class="flip-card-inner" id="id4">
   <div class="flip-card-front">
     <img src="image/c4.jpg" alt="chamchuri4">
     <h3>อาคารจามจุรี 4</h3>
     <p>คลิ้กเพื่อดูข้อมูล</p>
-    <div class="inner-shadow"></div>
+    <div class="inner-shadow"><h5>จุดเช็คอิน 4/9</h5></div>
   </div>
   <div class="flip-card-back">
     <h3>อาคารจามจุรี 4</h3>
@@ -111,13 +115,13 @@
   </div></div></div>
   
   <!--Image5-->
-  <div class="flip-card" onclick="myFunction('id5')">
+  <div class="flip-card" onclick="cardFlip('id5')">
     <div class="flip-card-inner" id="id5">
     <div class="flip-card-front">
       <img src="image/c5.jpg" alt="Parataracha">
       <h3>เรือนภะรตราชา</h3>
       <p>คลิ้กเพื่อดูข้อมูล</p>
-      <div class="inner-shadow"></div>
+      <div class="inner-shadow"><h5>จุดเช็คอิน 5/9</h5></div>
     </div>
     <div class="flip-card-back">
       <h3>เรือนภะรตราชา</h3>
@@ -130,13 +134,13 @@
     </div></div></div>
   
   <!--Image6-->
-  <div class="flip-card" onclick="myFunction('id6')">
+  <div class="flip-card" onclick="cardFlip('id6')">
     <div class="flip-card-inner" id="id6">
     <div class="flip-card-front">
       <img src="image/c6.jpg" alt="pipittasilpa">
       <h3>ลานพิพิธศิลป์</h3>
       <p>คลิ้กเพื่อดูข้อมูล</p>
-      <div class="inner-shadow"></div>
+      <div class="inner-shadow"><h5>จุดเช็คอิน 6/9</h5></div>
     </div>
     <div class="flip-card-back">
       <h3>ลานพิพิธศิลป์</h3> 
@@ -149,13 +153,13 @@
 <div id="flip-card-container3">
     <button class="prev" onclick = "prevSlideMain()">&#10094;</button>
     <!--Image7-->
-    <div class="flip-card" onclick="myFunction('id7')">
+    <div class="flip-card" onclick="cardFlip('id7')">
     <div class="flip-card-inner" id="id7">
     <div class="flip-card-front">
       <img src="image/c7.jpg" alt="CU museum">
       <h3>พิพิธภัณฑ์จุฬาฯ</h3>
       <p>คลิ้กเพื่อดูข้อมูล</p>
-      <div class="inner-shadow"></div>
+      <div class="inner-shadow"><h5>จุดเช็คอิน 7/9</h5></div>
     </div>
     <div class="flip-card-back">
       <h3>พิพิธภัณฑ์จุฬาฯ</h3> 
@@ -166,13 +170,13 @@
     </div></div></div>
     
     <!--Image8-->
-    <div class="flip-card" onclick="myFunction('id8')">
+    <div class="flip-card" onclick="cardFlip('id8')">
       <div class="flip-card-inner" id="id8">
       <div class="flip-card-front">
         <img src="image/c8.jpg" alt="ตึกจักรพงษ์">
         <h3>ตึกจักรพงษ์</h3>
         <p>คลิ้กเพื่อดูข้อมูล</p>
-        <div class="inner-shadow"></div>
+        <div class="inner-shadow"><h5>จุดเช็คอิน 8/9</h5></div>
       </div>
       <div class="flip-card-back">
         <h3>ตึกจักรพงษ์</h3>
@@ -184,13 +188,13 @@
       </div></div></div>
     
     <!--Image9-->
-    <div class="flip-card" onclick="myFunction('id9')">
+    <div class="flip-card" onclick="cardFlip('id9')">
       <div class="flip-card-inner" id="id9">
       <div class="flip-card-front">
         <img src="image/c9.jpg" alt="ลานจักรพงษ์">
         <h3>ลานจักรพงษ์</h3>
         <p>คลิ้กเพื่อดูข้อมูล</p>
-        <div class="inner-shadow"></div>
+        <div class="inner-shadow"><h5>จุดเช็คอิน 9/9</h5></div>
       </div>
       <div class="flip-card-back">
         <h1>ลานจักรพงษ์</h1> 
@@ -202,274 +206,241 @@
 </div>
 
 <div id="carousel_other">
+  <h3 class="mini_header" id="info-header-1">เรื่องน่ารู้ อาคารในจุฬาฯ (จุดอื่นๆ)</h3>
+  <div class="mini_menu">
+    <button onclick="selectPage('main')" class="checkpoint-button">สถานที่เช็คอิน</button>
+    <button class="other-button" disabled="true">สถานที่อื่นๆ</button>
+    <button onclick="selectPage('bands')" class="band-button">วงดนตรี</button>
+    <button onclick="selectPage('shops')" class="shop-button">ร้านค้า</button>
+    <button onclick="selectPage('access')" class="access-button">เดินทาง</button>
+  </div>
 <div id="flip-card-container4">
   <button class="prev" disabled="true">&#10094;</button>
     <!--Image1-->
-    <div class="flip-card" onclick="myFunction('other1')">
-    <div class="flip-card-inner" id="other1">
-    <div class="flip-card-front">
-      <img src="image/clock.jpg" alt="SEIKO">
-      <h3>อาคารมหามกุฏ</h3>
-      <p>คลิ้กเพื่อดูข้อมูล</p>
-      <div class="inner-shadow"></div>
-    </div>
-    <div class="flip-card-back">
-      <h1>หอนาฬิกา SEIKO</h1> 
-      <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-      <p>Architect & Engineer</p> 
-      <p>We love that guy</p>
-    </div></div></div>
-    
-    <!--Image2-->
-    <div class="flip-card" onclick="myFunction('other2')">
-      <div class="flip-card-inner" id="other2">
+    <div class="flip-card" onclick="cardFlip('oth1')">
+      <div class="flip-card-inner" id="oth1">
       <div class="flip-card-front">
-        <img src="image/clock.jpg" alt="SEIKO">
-        <h3>อุโมงค์ลอดถนนพญาไท</h3>
+        <img src="image/o1.jpg" alt="ศาลาพระเกี้ยว">
+        <h3>ศาลาพระเกี้ยว</h3>
         <p>คลิ้กเพื่อดูข้อมูล</p>
-        <div class="inner-shadow"></div>
+        <div class="inner-shadow"><h5>จุดน่าสนใจ #1</h5></div>
       </div>
       <div class="flip-card-back">
-        <h1>หอนาฬิกา SEIKO</h1> 
-        <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-        <p>Architect & Engineer</p> 
-        <p>We love that guy</p>
+        <h3>ศาลาพระเกี้ยว</h3>
+        <p>(พ.ศ. 2510)</p> 
+        <img src="image/line_break.png" class="flip-card-back-line">
+        <p class="info">ผู้ออกแบบ: ศ. ม.จ. โวฒยากร วรวรรณ<br>ผู้ช่วยออกแบบ: รศ. เลิศ อุรัสยนันทน์<br> วิศวกร: ศ.ดร. รชฏ กาญจนะวณิชย์</p>
+        <p class="info">"ศาลาพระเกี้ยว" เป็นอาคาร 2 ชั้นที่สร้างขึ้นเพื่อใช้เป็นศูนย์รวมของนิสิต มีห้องโถงชั้นลอยเป็นที่สำหรับจัดนิทรรศการ การประชุม การบรรยาย และงานอื่นๆสำหรับคณาจารย์ นิสิตเก่า และนิสิตปัจจุบัน</p>
+        <p class="info">ส่วนห้องชั้นล่าง จัดเป็นที่ตั้งของหน่วยงานต่างๆ เช่นสหกรณ์นิสิต และศูนย์หนังสือ</p>
+      </div></div></div>
+    
+    <!--Image2-->
+    <div class="flip-card" onclick="cardFlip('oth2')">
+      <div class="flip-card-inner" id="oth2">
+      <div class="flip-card-front">
+        <img src="image/o2.jpg" alt="อาคารแถบ นีละนิธิ">
+        <h3>อาคารแถบ นีละนิธิ</h3>
+        <p>คลิ้กเพื่อดูข้อมูล</p>
+        <div class="inner-shadow"><h5>จุดน่าสนใจ #2</h5></div>
+      </div>
+      <div class="flip-card-back">
+        <h3>อาคารแถบ นีละนิธิ</h3> 
+        <img src="image/line_break.png" class="flip-card-back-line">
+        <p class="info">ตึกนึ้ตั้งชื่อตาม ศ.ดร.แถบ นีละนิธิ ซึ่งเป็นนักเรียนไทยคนแรกที่ได้รับทุนเล่าเรียนหลวงไปศึกษาต่อที่ประเทศอังกฤษ และเป็นด็อกเตอร์คนแรกของไทยที่สอนหนังสือในมหาวิทยาลัย ท่านเป็นอาจารย์ทางด้านวิชาเคมี และได้รับตำแหน่งเป็นอธิการบดีของมหาวิทยาลัยในปี พ.ศ. 2512</p>
+        <p class="info">ปัจจุบันมูลนิธิ ศ.ดร.แถบ นีละนิธิ ยังคงอยู่และมีการมอบรางวัลการศึกษาแก่นักเรียนในสายวิทยาศาสตร์อย่างต่อเนื่อง</p>
+        <p class="info"></p>
       </div></div></div>
     
     <!--Image3-->
-    <div class="flip-card" onclick="myFunction('other3')">
-      <div class="flip-card-inner" id="other3">
+    <div class="flip-card" onclick="cardFlip('oth3')">
+      <div class="flip-card-inner" id="oth3">
       <div class="flip-card-front">
-        <img src="image/clock.jpg" alt="SEIKO">
-        <h3>ครุศาสตร์</h3>
+        <img src="image/o3.jpg" alt="อนุสรณ์">
+        <h3>อนุสรณ์สถาน นร.สห. 2488</h3>
         <p>คลิ้กเพื่อดูข้อมูล</p>
-        <div class="inner-shadow"></div>
+        <div class="inner-shadow"><h5>จุดน่าสนใจ #3</h5></div>
       </div>
       <div class="flip-card-back">
-        <h1>หอนาฬิกา SEIKO</h1> 
-        <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-        <p>Architect & Engineer</p> 
-        <p>We love that guy</p>
+        <h3>อนุสรณ์สถาน นร.สห. 2488</h3>
+        <p>(พ.ศ. (2538))</p> 
+        <img src="image/line_break.png" class="flip-card-back-line">
+        <p class="info">"อนุสรณ์สถาน นร.สห. 2488" ตั้งอยู่บนลานตรงหน้าหอสมุดกลาง เป็นอนุสรณ์สถานที่สร้างขึ้นเพื่อแสดงถึงความกล้าหาญและเสียสละของนิสิตจุฬาฯที่ได้สมัครเข้าร่วมเป็นนักเรียนนายทหารสารวัติ 
+          ในช่วงสงครามโลกครั้งที่สอง</p>
+        <p class="info">อนุสรณ์สถานนี้ มีชื่อเรียกอยากไม่ทางการว่า “หินโอเค” เนื่องจากรูปร่างของหินมีลักษณะคล้ายการทำมือโอเค</p>
       </div></div></div>
-    <button class="next" onclick="nextSlideMain()">&#10095;</button>
+    <button class="next" onclick="nextSlideOther()">&#10095;</button>
 </div>   
 <div id="flip-card-container5">
-      <button class="prev" onclick = "prevSlideMain()">&#10094;</button>
+      <button class="prev" onclick = "prevSlideOther()">&#10094;</button>
       <!--Image4-->
-      <div class="flip-card" onclick="myFunction('id4')"class="carousel__item" pos="1">
-      <div class="flip-card-inner" id="id4">
+      <div class="flip-card" onclick="cardFlip('oth4')">
+      <div class="flip-card-inner" id="oth4">
       <div class="flip-card-front">
-        <img src="image/clock.jpg" alt="SEIKO">
-        <h3>อาคารจามจุรี 4</h3>
+        <img src="image/o4.jpg" alt="central-library">
+        <h3>หอสมุดกลาง</h3>
         <p>คลิ้กเพื่อดูข้อมูล</p>
-        <div class="inner-shadow"></div>
+        <div class="inner-shadow"><h5>จุดน่าสนใจ #4</h5></div>
       </div>
       <div class="flip-card-back">
-        <h1>หอนาฬิกา SEIKO</h1> 
-        <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-        <p>Architect & Engineer</p> 
-        <p>We love that guy</p>
+        <h3>หอสมุดกลาง</h3>
+        <p>(พ.ศ.2521)</p> 
+        <img src="image/line_break.png" class="flip-card-back-line">
+        <p class="info">"สำนักงานวิทยทรัพยากร จุฬาลงกรณ์มหาวิทยาลัย" หรือ "หอสมุดกลาง" นั้นเป็นที่สำหรับอ่านหนังสือ ใช้อินเตอร์เน็ต และในช่วงการสอบกลางภาคและปลายภาคจะมีนักเรียนมาใช้บริการกันเป็นจำนวนมาก</p> 
       </div></div></div>
       
       <!--Image5-->
-      <div class="flip-card" onclick="myFunction('id5')"class="carousel__item" pos="1">
-        <div class="flip-card-inner" id="id5">
+      <div class="flip-card" onclick="cardFlip('oth5')">
+        <div class="flip-card-inner" id="oth5">
         <div class="flip-card-front">
-          <img src="image/clock.jpg" alt="SEIKO">
-          <h3>เรือนภะรตราชา</h3>
+          <img src="image/o5.jpg" alt="Nirumit">
+          <h3>เรือนจุฬานฤมิต</h3>
           <p>คลิ้กเพื่อดูข้อมูล</p>
-          <div class="inner-shadow"></div>
+          <div class="inner-shadow"><h5>จุดน่าสนใจ #5</h5></div>
         </div>
         <div class="flip-card-back">
-          <h1>d</h1> 
-          <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h3>เรือนจุฬานฤมิต</h3>
+          <p>(พ.ศ.2530)</p> 
+          <img src="image/line_break.png" class="flip-card-back-line">
+          <p class="info">สถาปนิก : ศาสตราจารย์กิตติคุณ ดร.บัณฑิต จุลาสัย</p> 
+          <p class="info">"เรือนจุฬานฤมิต" ตั้งอยู่ทางทิศตะวันตกของเรือนภะรตราชา สร้างขึ้นมาเพื่อเป็นเรือนรับรองของมหาวิทยาลัย 
+            และเป็นส่วนหนึ่งของโครงการอนุรักษ์เรือน<br>ภะรตราชา</p> 
+            <p class="info">ตัวอาคารมี 1 ชั้น ออกแบบให้กลมกลืนกับเรือนภะรตราชา ในเรือนมีห้องโถงเอนกประสงค์ที่ใช้จัดเลี้ยงรับรอง</p> 
         </div></div></div>
       
       <!--Image6-->
-      <div class="flip-card" onclick="myFunction('id6')">
-        <div class="flip-card-inner" id="id6">
+      <div class="flip-card" onclick="cardFlip('oth6')">
+        <div class="flip-card-inner" id="oth6">
         <div class="flip-card-front">
-          <img src="image/clock.jpg" alt="SEIKO">
-          <h3>ลานพิพิธศิลป์</h3>
+          <img src="image/o6.jpg" alt="SEIKO">
+          <h3>ซุ้มจามจุรี</h3>
           <p>คลิ้กเพื่อดูข้อมูล</p>
-          <div class="inner-shadow"></div>
+          <div class="inner-shadow"><h5>จุดน่าสนใจ #6</h5></div>
         </div>
         <div class="flip-card-back">
-          <h1>หอนาฬิกา SEIKO</h1> 
-          <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h1>ซุ้มจามจุรี</h1> 
+          <img src="image/line_break.png" class="flip-card-back-line">
+          <p class="info">ต้นจามจุรีซึ่งเป็นต้นไม้ประจำมหาวิทยาลัยนั้นมีปลูกอยู่ทั่วพื้นที่จุฬาฯ</p> 
+          <p class="info">ในจุฬาฯฝั่งสามย่าน ก็มีซุ้มจามจุรีที่สวยงาม อยู่บริเวณถนนจากเรือนภะรตราชาจนถึงหน้าหอใน ซึ่งนิสิตนิยมมาถ่ายรูปปริญญา</p>
+          <p class="info">อีกทั้งถนนเส้นนี้ยังมีความสวยงาม เมื่อมองจากมุมสะพานลอยทางเชื่อมห้างสรรพสินค้ามาบุญครอง</p> 
         </div></div></div>
-      <button class="next" onclick="nextSlideMain()">&#10095;</button>
+      <button class="next" onclick="nextSlideOther()">&#10095;</button>
 </div> 
 <div id="flip-card-container6">
-        <button class="prev" onclick = "prevSlideMain()">&#10094;</button>
+        <button class="prev" onclick = "prevSlideOther()">&#10094;</button>
         <!--Image7-->
-        <div class="flip-card" onclick="myFunction('id7')"class="carousel__item" pos="1">
-        <div class="flip-card-inner" id="id7">
+        <div class="flip-card" onclick="cardFlip('oth7')">
+        <div class="flip-card-inner" id="oth7">
         <div class="flip-card-front">
-          <img src="image/clock.jpg" alt="SEIKO">
-          <h3>พิพิธภัณฑ์จุฬาฯ</h3>
+          <img src="image/o7.jpg" alt="อาคารสถาปัตยกรรม 1">
+          <h3>อาคารสถาปัตยกรรม 1</h3>
           <p>คลิ้กเพื่อดูข้อมูล</p>
-          <div class="inner-shadow"></div>
+          <div class="inner-shadow"><h5>จุดน่าสนใจ #7</h5></div>
         </div>
         <div class="flip-card-back">
-          <h1>หอนาฬิกา SEIKO</h1> 
-          <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-          <p>Architect & Engineer</p> 
-          <p>We love that guy</p>
+          <h3>อาคารสถาปัตยกรรม 1</h3> 
+          <p class="info">(พ.ศ. 2483)</p>
+          <img src="image/line_break.png" class="flip-card-back-line">
+          <p class="info">"อาคารสถาปัตยกรรม" 1 เป็นอาคาร 3 ชั้น สูง 30 เมตร และเป็นอาคารเรียนหลังแรกของคณะสถาปัตยกรรมศาสตร์ ออกแบบโดยอาจารย์ลูเชียง คอปเป้ และ อาจารย์ศิววงศ์ กุญชร ณ อยุธยา</p> 
         </div></div></div>
         
         <!--Image8-->
-        <div class="flip-card" onclick="myFunction('id8')"class="carousel__item" pos="1">
-          <div class="flip-card-inner" id="id8">
+        <div class="flip-card" onclick="cardFlip('oth8')">
+          <div class="flip-card-inner" id="oth8">
           <div class="flip-card-front">
-            <img src="image/clock.jpg" alt="SEIKO">
-            <h3>ตึกจักรพงษ์</h3>
+            <img src="image/o8.jpg" alt="statue">
+            <h3>พระบรมรูปสองรัชกาล</h3>
             <p>คลิ้กเพื่อดูข้อมูล</p>
-            <div class="inner-shadow"></div>
+            <div class="inner-shadow"><h5>จุดน่าสนใจ #8</h5></div>
           </div>
           <div class="flip-card-back">
-            <h1>หอนาฬิกา SEIKO</h1> 
-            <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-            <p>Architect & Engineer</p> 
-            <p>We love that guy</p>
+            <h3>พระบรมรูปสองรัชกาล</h3> 
+            <p>(พ.ศ.2530)</p>
+            <img src="image/line_break.png" class="flip-card-back-line">
+            <p class="info">“พระบรมรูปสองรัชกาล” สร้างขึ้นในปีพ.ศ.2530 ซึ่งเป็นปีเฉลิมพระชนมพรรษาครบ 5 รอบ ในพระบาทสมเด็จพระเจ้าอยู่หัว (ร.9) และยังเป็นวาระครบรอบ 70 ปี สถาปนาจุฬาลงกรณ์มหาวิทยาลัย เพื่อระลึกถึงพระมหากรุณาธิคุณของพระบาทสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว (ร.5) ผู้พระราชทานกำเนิดจุฬาลงกรณ์มหาวิทยาลัย และ พระบาทสมเด็จพระมงกุฎเกล้าเจ้าอยู่หัว (ร.6) ผู้ทรงสถาปนาจุฬาลงกรณ์มหาวิทยาลัย
+            </p> 
           </div></div></div>
         
         <!--Image9-->
-        <div class="flip-card" onclick="myFunction('id9')"class="carousel__item" pos="1">
-          <div class="flip-card-inner" id="id9">
+        <div class="flip-card" onclick="cardFlip('oth9')"class="carousel__item" pos="1">
+          <div class="flip-card-inner" id="oth9">
           <div class="flip-card-front">
-            <img src="image/clock.jpg" alt="SEIKO">
-            <h3>ลานจักรพงษ์</h3>
+            <img src="image/o9.jpg" alt="SEIKO">
+            <h3>หอนาฬิกา</h3>
             <p>คลิ้กเพื่อดูข้อมูล</p>
-            <div class="inner-shadow"></div>
+            <div class="inner-shadow"><h5>จุดน่าสนใจ #9</h5></div>
           </div>
           <div class="flip-card-back">
-            <h1>หอนาฬิกา SEIKO</h1> 
-            <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-            <p>Architect & Engineer</p> 
-            <p>We love that guy</p>
+            <h3>หอนาฬิกา SEIKO</h3> 
+            <p>(พ.ศ.2509)</p>
+            <img src="image/line_break.png" class="flip-card-back-line">
+            <p class="info">“หอนาฬิกา” ที่ตั้งอยู่ตรงหน้าตึกจักรพงษ์นั้น มีสายการบินเจแปนแอร์ไลน์ (J.A.L) เป็นผู้สร้างขึ้น เพื่อมอบเป็นที่ระลึกในโอกาส 50 ปีแห่งการสถาปนาจุฬาลงกรณ์มหาวิทยาลัย อีกทั้งเป็นวาระ 10 ปีที่สายการบินเจแปนแอร์ไลน์ ได้ให้บริการการบินในประเทศไทย <br>ซึ่งตัวเรือนเป็นนาฬิกา SEIKO และยังคงใช้งานอยู่จนกระทั่งทุกวันนี้
+            </p> 
           </div></div></div>
-        <button class="next" disabled="true">&#10095;</button>
+          <button class="next" onclick="nextSlideOther()">&#10095;</button>
 </div>
 <div id="flip-card-container7">
-          <button class="prev" onclick = "prevSlideMain()">&#10094;</button>
-          <!--Image7-->
-          <div class="flip-card" onclick="myFunction('id7')"class="carousel__item" pos="1">
-          <div class="flip-card-inner" id="id7">
+          <button class="prev" onclick = "prevSlideOther()">&#10094;</button>
+          <!--Image10-->
+          <div class="flip-card" onclick="cardFlip('oth10')"class="carousel__item" pos="1">
+          <div class="flip-card-inner" id="oth10">
           <div class="flip-card-front">
-            <img src="image/clock.jpg" alt="SEIKO">
-            <h3>พิพิธภัณฑ์จุฬาฯ</h3>
+            <img src="image/o10.jpg" alt="SEIKO">
+            <h3>อาคารวิศวกรรมศาสตร์ 1</h3>
             <p>คลิ้กเพื่อดูข้อมูล</p>
-            <div class="inner-shadow"></div>
+            <div class="inner-shadow"><h5>จุดน่าสนใจ #10</h5></div>
           </div>
           <div class="flip-card-back">
-            <h1>หอนาฬิกา SEIKO</h1> 
-            <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-            <p>Architect & Engineer</p> 
-            <p>We love that guy</p>
+            <h3>อาคารวิศวกรรมศาสตร์ 1</h3> 
+            <p>(พ.ศ. 2584)</p>
+            <img src="image/line_break.png" class="flip-card-back-line">
+            <p class="info">"อาคารวิศวกรรมศาสตร์ 1" เป็นอาคารเก่าแก่ของคณะวิศวกรรมศาสตร์ มีชื่อเรียกว่า "ตึกแดง" หรือ "ปราสาทแดง" มีทั้งหมด 3 ชั้น สูง 21 เมตร</p>
+            <p class="info">อาคารนี้ออกแบบโดยพระสาโรชรัตนนิมมานก์ (สาโรช สุขยางค์) ปัจจุบันมีอาคารวิศวฯ 100 ปีตั้งอยู่ด้านข้าง</p> 
           </div></div></div>
-          
-          <!--Image8-->
-          <div class="flip-card" onclick="myFunction('id8')"class="carousel__item" pos="1">
-            <div class="flip-card-inner" id="id8">
-            <div class="flip-card-front">
-              <img src="image/clock.jpg" alt="SEIKO">
-              <h3>ตึกจักรพงษ์</h3>
-              <p>คลิ้กเพื่อดูข้อมูล</p>
-              <div class="inner-shadow"></div>
-            </div>
-            <div class="flip-card-back">
-              <h1>หอนาฬิกา SEIKO</h1> 
-              <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-              <p>Architect & Engineer</p> 
-              <p>We love that guy</p>
-            </div></div></div>
-          
-          <!--Image9-->
-          <div class="flip-card" onclick="myFunction('id9')"class="carousel__item" pos="1">
-            <div class="flip-card-inner" id="id9">
-            <div class="flip-card-front">
-              <img src="image/clock.jpg" alt="SEIKO">
-              <h3>ลานจักรพงษ์</h3>
-              <p>คลิ้กเพื่อดูข้อมูล</p>
-              <div class="inner-shadow"></div>
-            </div>
-            <div class="flip-card-back">
-              <h1>หอนาฬิกา SEIKO</h1> 
-              <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-              <p>Architect & Engineer</p> 
-              <p>We love that guy</p>
-            </div></div></div>
           <button class="next" disabled="true">&#10095;</button>
-</div>
-<div id="flip-card-container8">
-            <button class="prev" onclick = "prevSlideMain()">&#10094;</button>
-            <!--Image7-->
-            <div class="flip-card" onclick="myFunction('id7')"class="carousel__item" pos="1">
-            <div class="flip-card-inner" id="id7">
-            <div class="flip-card-front">
-              <img src="image/clock.jpg" alt="SEIKO">
-              <h3>พิพิธภัณฑ์จุฬาฯ</h3>
-              <p>คลิ้กเพื่อดูข้อมูล</p>
-              <div class="inner-shadow"></div>
-            </div>
-            <div class="flip-card-back">
-              <h1>หอนาฬิกา SEIKO</h1> 
-              <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-              <p>Architect & Engineer</p> 
-              <p>We love that guy</p>
-            </div></div></div>
-            
-            <!--Image8-->
-            <div class="flip-card" onclick="myFunction('id8')"class="carousel__item" pos="1">
-              <div class="flip-card-inner" id="id8">
-              <div class="flip-card-front">
-                <img src="image/clock.jpg" alt="SEIKO">
-                <h3>ตึกจักรพงษ์</h3>
-                <p>คลิ้กเพื่อดูข้อมูล</p>
-                <div class="inner-shadow"></div>
-              </div>
-              <div class="flip-card-back">
-                <h1>หอนาฬิกา SEIKO</h1> 
-                <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-                <p>Architect & Engineer</p> 
-                <p>We love that guy</p>
-              </div></div></div>
-            
-            <!--Image9-->
-            <div class="flip-card" onclick="myFunction('id9')"class="carousel__item" pos="1">
-              <div class="flip-card-inner" id="id9">
-              <div class="flip-card-front">
-                <img src="image/clock.jpg" alt="SEIKO">
-                <h3>ลานจักรพงษ์</h3>
-                <p>คลิ้กเพื่อดูข้อมูล</p>
-                <div class="inner-shadow"></div>
-              </div>
-              <div class="flip-card-back">
-                <h1>หอนาฬิกา SEIKO</h1> 
-                <img src="https://www.kindpng.com/picc/m/213-2136215_clip-art-page-break-hd-png-download.png" alt="Clip Art Page Break, HD Png Download@kindpng.com">
-                <p>Architect & Engineer</p> 
-                <p>We love that guy</p>
-              </div></div></div>
-            <button class="next" disabled="true">&#10095;</button>
 </div>
 </div>
 
 <!--Show info-->
-<h3 class="mini_header">วงดนตรี และเวลาการแสดง</h3>
-<div id="bandnschedules"></div>
+
+<div id="bands">
+  <h3 class="mini_header" id="info-header-2">วงดนตรี และเวลาการแสดง</h3>
+  <div class="mini_menu">
+    <button onclick="selectPage('main')" class="checkpoint-button">สถานที่เช็คอิน</button>
+    <button onclick="selectPage('other')" class="other-button">สถานที่อื่นๆ</button>
+    <button class="band-button" disabled="true">วงดนตรี</button>
+    <button onclick="selectPage('shops')" class="shop-button">ร้านค้า</button>
+    <button onclick="selectPage('access')" class="access-button">เดินทาง</button>
+  </div>
+  <h3 class="sorrytext">ข้อมูลส่วนนี้จะได้รับการเพิ่มเติมในเร็วๆนี้นะคะ<br>ต้องขออภัยในความไม่สะดวกด้วยค่ะ</h3>
+</div>
 
 <!--Shop info-->
-<h3 class="mini_header">ร้านค้าที่ร่วมงาน</h3>
-<div id="shops"></div>
+
+<div id="shops">
+  <h3 class="mini_header" id="info-header-3">ร้านค้าที่ร่วมงาน</h3>
+  <div class="mini_menu">
+    <button onclick="selectPage('main')" class="checkpoint-button">สถานที่เช็คอิน</button>
+    <button onclick="selectPage('other')" class="other-button">สถานที่อื่นๆ</button>
+    <button onclick="selectPage('bands')" class="band-button">วงดนตรี</button>
+    <button class="shop-button" disabled="true">ร้านค้า</button>
+    <button onclick="selectPage('access')" class="access-button">เดินทาง</button>
+  </div>
+  <h3 class="sorrytext">ข้อมูลส่วนนี้จะได้รับการเพิ่มเติมในเร็วๆนี้นะคะ<br>ต้องขออภัยในความไม่สะดวกด้วยค่ะ</h3>
+</div>
 
 <!--Access info-->
-<h3 class="mini_header">การเดินทางมาที่จุดจัดงาน</h3>
-<div class="access"></div>
+
+<div id="access">
+  <h3 class="mini_header" id="info-header-4">การเดินทางมาที่จุดจัดงาน</h3>
+  <div class="mini_menu">
+    <button onclick="selectPage('main')" class="checkpoint-button">สถานที่เช็คอิน</button>
+    <button onclick="selectPage('other')" class="other-button">สถานที่อื่นๆ</button>
+    <button onclick="selectPage('bands')" class="band-button">วงดนตรี</button>
+    <button onclick="selectPage('shops')" class="shop-button">ร้านค้า</button>
+    <button class="access-button" disabled="true">เดินทาง</button>
+  </div>
+  <h3 class="sorrytext">ข้อมูลส่วนนี้จะได้รับการเพิ่มเติมในเร็วๆนี้นะคะ<br>ต้องขออภัยในความไม่สะดวกด้วยค่ะ</h3>
+</div>
  
 <!--Footer-->
 <div class="footer">
@@ -481,15 +452,46 @@
 function myFunction() {
   var x = document.getElementById("demo");if (x.className.indexOf("w3-show") == -1) {x.className += " w3-show";} else { x.className = x.className.replace(" w3-show", "");}
 }
-function toggleCarousel() {
+function selectPage(n) {
   var a = document.getElementById("carousel_checkpoint");
   var b = document.getElementById("carousel_other");
-  if (a.style.display == "none") {
+  var c = document.getElementById("bands");
+  var d = document.getElementById("shops");
+  var e = document.getElementById("access");
+  if(n=='main'){
     a.style.display = "block";
     b.style.display = "none";
-  } else {
+    c.style.display = "none";
+    d.style.display = "none";
+    e.style.display = "none";
+  }
+  else if(n=='other'){
     a.style.display = "none";
     b.style.display = "block";
+    c.style.display = "none";
+    d.style.display = "none";
+    e.style.display = "none";
+  }
+  else if(n=='bands'){
+    a.style.display = "none";
+    b.style.display = "none";
+    c.style.display = "block";
+    d.style.display = "none";
+    e.style.display = "none";
+  }
+  else if(n=='shops'){
+    a.style.display = "none";
+    b.style.display = "none";
+    c.style.display = "none";
+    d.style.display = "block";
+    e.style.display = "none";
+  }
+  else{
+    a.style.display = "none";
+    b.style.display = "none";
+    c.style.display = "none";
+    d.style.display = "none";
+    e.style.display = "block";
   }
 }
 function nextSlideMain(){
@@ -532,10 +534,70 @@ function prevSlideMain(){
     c.style.display = "none";
   }
 }
-function myFunction(x){
+function cardFlip(x){
         var a = document.getElementById(x)
         a.classList.toggle("card-flipped");
     }
+function nextSlideOther(){
+  var a = document.getElementById("flip-card-container4")
+  var b = document.getElementById("flip-card-container5")
+  var c = document.getElementById("flip-card-container6")
+  var d = document.getElementById("flip-card-container7")
+  if(a.style.display == "flex"){
+    a.style.display = "none";
+    b.style.display = "flex";
+    c.style.display = "none";
+    d.style.display = "none";
+  }
+  else if(b.style.display == "flex"){
+    a.style.display = "none";
+    b.style.display = "none";
+    c.style.display = "flex";
+    d.style.display = "none";
+  }
+  else if(c.style.display == "flex"){
+    a.style.display = "none";
+    b.style.display = "none";
+    c.style.display = "none";
+    d.style.display = "flex";
+  }
+  else{
+    a.style.display = "flex";
+    b.style.display = "none";
+    c.style.display = "none";
+    d.style.display = "none";
+  }
+}
+function prevSlideOther(){
+  var a = document.getElementById("flip-card-container4")
+  var b = document.getElementById("flip-card-container5")
+  var c = document.getElementById("flip-card-container6")
+  var d = document.getElementById("flip-card-container7")
+  if(a.style.display == "flex"){
+    a.style.display = "none";
+    b.style.display = "none";
+    c.style.display = "none";
+    d.style.display = "flex";
+  }
+  else if(b.style.display == "flex"){
+    a.style.display = "flex";
+    b.style.display = "none";
+    c.style.display = "none";
+    d.style.display = "none";
+  }
+  else if(c.style.display == "flex"){
+    a.style.display = "none";
+    b.style.display = "flex";
+    c.style.display = "none";
+    d.style.display = "none";
+  }
+  else{
+    a.style.display = "none";
+    b.style.display = "none";
+    c.style.display = "flex";
+    d.style.display = "none";
+  }
+}
 </script>
 </body>
 </html>
