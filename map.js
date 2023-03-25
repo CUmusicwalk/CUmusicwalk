@@ -83,32 +83,164 @@ var info_wc8 = new google.maps.InfoWindow({content:content_wc[7],});
 
 ///Marker event listener for infowindow///
 //for checkin
-marker1.addListener("click", () => {info_marker1.open({anchor: marker1,map,});});
-marker2.addListener("click", () => {info_marker2.open({anchor: marker2,map,});});
-marker3.addListener("click", () => {info_marker3.open({anchor: marker3,map,});});
-marker4.addListener("click", () => {info_marker4.open({anchor: marker4,map,});});
-marker5.addListener("click", () => {info_marker5.open({anchor: marker5,map,});});
-marker6.addListener("click", () => {info_marker6.open({anchor: marker6,map,});});
-marker7.addListener("click", () => {info_marker7.open({anchor: marker7,map,});});
-marker8.addListener("click", () => {info_marker8.open({anchor: marker8,map,});});
-marker9.addListener("click", () => {info_marker9.open({anchor: marker9,map,});});
-pinkmarket.addListener("click", () => {info_pinkmarket.open({anchor: pinkmarket,map,});});
+marker1.addListener("click", () => {
+  info_marker1.open({anchor: marker1,map,});info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+marker2.addListener("click", () => {
+  info_marker2.open({anchor: marker2,map,});info_marker1.close();info_marker3.close();info_marker4.close();info_marker5.close();
+info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+info_pinkmarket.close();
+info_f.close(); info_f1.close();
+});
+marker3.addListener("click", () => {
+  info_marker3.open({anchor: marker3,map,});
+info_marker1.close();info_marker2.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close();info_f.close(); info_f1.close();
+});
+marker4.addListener("click", () => {
+  info_marker4.open({anchor: marker4,map,});
+info_marker1.close();info_marker2.close();info_marker3.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close();info_f.close(); info_f1.close();
+});
+marker5.addListener("click", () => {
+  info_marker5.open({anchor: marker5,map,});
+info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close();info_f.close(); info_f1.close();
+});
+marker6.addListener("click", () => {
+  info_marker6.open({anchor: marker6,map,});info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close();info_f.close(); info_f1.close();
+});
+marker7.addListener("click", () => {
+  info_marker7.open({anchor: marker7,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close();info_f.close(); info_f1.close();
+});
+marker8.addListener("click", () => {
+  info_marker8.open({anchor: marker8,map,});info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close();info_f.close(); info_f1.close();
+});
+marker9.addListener("click", () => {
+  info_marker9.open({anchor: marker9,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_pinkmarket.close();info_f.close(); info_f1.close();
+});
+pinkmarket.addListener("click", () => {
+  info_pinkmarket.open({anchor: pinkmarket,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();
+});
 //for parking
-p1.addListener("click", () => {info_p1.open({anchor: p1,map,})});
-p2.addListener("click", () => {info_p2.open({anchor: p2,map,})});
+p1.addListener("click", () => {
+  info_p1.open({anchor: p1,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+p2.addListener("click", () => {
+  info_p2.open({anchor: p2,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
 //for firstaid
-f1.addListener("click", () => {info_f.open({anchor: f1,map,})});
-f2.addListener("click", () => {info_f.open({anchor: f2,map,})});
-f3.addListener("click", () => {info_f1.open({anchor: f3,map,})});
+f1.addListener("click", () => {
+  info_f.open({anchor: f1,map,});info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f1.close();info_pinkmarket.close();
+});
+f2.addListener("click", () => {
+  info_f.open({anchor: f2,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+   info_f1.close();info_pinkmarket.close();
+});
+f3.addListener("click", () => {
+  info_f1.open({anchor: f3,map,});info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_pinkmarket.close();
+});
 //for wc
-wc1.addListener("click", () => {info_wc1.open({anchor: wc1,map,})});
-wc2.addListener("click", () => {info_wc2.open({anchor: wc2,map,})});
-wc3.addListener("click", () => {info_wc3.open({anchor: wc3,map,})});
-wc4.addListener("click", () => {info_wc4.open({anchor: wc4,map,})});
-wc5.addListener("click", () => {info_wc5.open({anchor: wc5,map,})});
-wc6.addListener("click", () => {info_wc6.open({anchor: wc6,map,})});
-wc7.addListener("click", () => {info_wc7.open({anchor: wc7,map,})});
-wc8.addListener("click", () => {info_wc8.open({anchor: wc8,map,})});
+wc1.addListener("click", () => {
+  info_wc1.open({anchor: wc1,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+wc2.addListener("click", () => {
+  info_wc2.open({anchor: wc2,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+wc3.addListener("click", () => {
+  info_wc3.open({anchor: wc3,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+wc4.addListener("click", () => {
+  info_wc4.open({anchor: wc4,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+wc5.addListener("click", () => {
+  info_wc5.open({anchor: wc5,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+wc6.addListener("click", () => {
+  info_wc6.open({anchor: wc6,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+wc7.addListener("click", () => {
+  info_wc7.open({anchor: wc7,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
+});
+wc8.addListener("click", () => {
+  info_wc8.open({anchor: wc8,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();});
 //for other icon
 
 ///Close all infowindows///
@@ -116,7 +248,7 @@ google.maps.event.addListener(map, "click", function(event) {
   info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
   info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
   info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
-  info_pinkmarket.close(); removePolygon(chula);
+  info_f.close(); info_f1.close();info_pinkmarket.close(); togglePolygon(chula);
 });
 
 ///Area highlight///
@@ -125,7 +257,7 @@ chula.addListener("click", () => {
   info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
   info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
   info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
-  info_pinkmarket.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close();
 })
 ///Route highlight///
 var r1_2 = new google.maps.Polyline({path:p1_2,map:map,strokeColor:"#E4278F",strokeOpacity:0.8,strokeWeight:10});
@@ -142,6 +274,11 @@ function polygon(x){x.setMap(map)}
 function removePolygon(x){x.setMap(null);}
 function showMarker(x){x.setMap(map)}
 function removeMarker(x){x.setMap(null);}
+function togglePolygon(chula){ if(chula.getMap() == map){
+  removePolygon(chula)
+}else{
+  polygon(chula)
+}}
 
 ///Map controls///
 //toggle event area
