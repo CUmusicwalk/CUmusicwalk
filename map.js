@@ -22,6 +22,8 @@ var icon_o1 = {url:"icon/statue.png",scaledSize:new google.maps.Size(60,60)};
 var icon_o2 = {url:"icon/clock.png",scaledSize:new google.maps.Size(30,50)};
 var icon_o3 = {url:"icon/ok.png",scaledSize:new google.maps.Size(40,45)};
 var icon_o4 = {url:"icon/sala.png",scaledSize:new google.maps.Size(60,40)};
+var icon_photo = {url:"icon/photo.png",scaledSize: new google.maps.Size(30, 30)};
+var icon_food = {url:"icon/food.png",scaledSize: new google.maps.Size(30, 30)};
 
 ///Marker variables///
 //wc
@@ -52,6 +54,9 @@ var f2 = new google.maps.Marker({position: firstaid[1],map,icon:icon_firstaid,})
 var f3 = new google.maps.Marker({position: firstaid[2],map,icon:icon_firstaid,});
 //other icon
 var pinkmarket = new google.maps.Marker({position:other[0],map,icon:icon_pinkmarket,});
+var photo = new google.maps.Marker({position:other[5],map,icon:icon_photo,});
+var blue_market = new google.maps.Marker({position:other[6],map,icon:icon_food,});
+var food = new google.maps.Marker({position:other[7],map,icon:icon_food,});
 //var o1 = new google.maps.Marker({position:other[1],map,icon:icon_o1,});
 //var o2 = new google.maps.Marker({position:other[2],map,icon:icon_o2,});
 //var o3 = new google.maps.Marker({position:other[3],map,icon:icon_o3,});
@@ -80,6 +85,9 @@ var info_wc5 = new google.maps.InfoWindow({content:content_wc[4],});
 var info_wc6 = new google.maps.InfoWindow({content:content_wc[5],});
 var info_wc7 = new google.maps.InfoWindow({content:content_wc[6],});
 var info_wc8 = new google.maps.InfoWindow({content:content_wc[7],});
+var info_photo = new google.maps.InfoWindow({content:content_other[0],});
+var info_bluemarket = new google.maps.InfoWindow({content:content_other[1],});
+var info_food = new google.maps.InfoWindow({content:content_other[2],});
 
 ///Marker event listener for infowindow///
 //for checkin
@@ -242,13 +250,33 @@ wc8.addListener("click", () => {
   info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();
   info_f.close(); info_f1.close();info_pinkmarket.close();});
 //for other icon
-
+photo.addListener("click", () => {
+  info_photo.open({anchor: photo,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close(); info_bluemarket.close(); info_food.close;
+});
+blue_market.addListener("click", () => {
+  info_bluemarket.open({anchor: blue_market,map,});
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close(); info_photo.close(); info_food.close;
+});
+food.addListener("click", () => {
+  info_food.open({anchor: food,map,}); 
+  info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
+  info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
+  info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
+  info_f.close(); info_f1.close();info_pinkmarket.close(); info_photo.close(); info_bluemarket.close();
+});
 ///Close all infowindows///
 google.maps.event.addListener(map, "click", function(event) {
   info_marker1.close();info_marker2.close();info_marker3.close();info_marker4.close();info_marker5.close();
   info_marker6.close();info_marker7.close();info_marker8.close();info_marker9.close();info_p1.close();info_p2.close();
   info_wc1.close();info_wc2.close();info_wc3.close();info_wc4.close();info_wc5.close();info_wc6.close();info_wc7.close();info_wc8.close();
-  info_f.close(); info_f1.close();info_pinkmarket.close(); togglePolygon(chula);
+  info_f.close(); info_f1.close();info_pinkmarket.close(); togglePolygon(chula); info_photo.close(); info_bluemarket.close(); info_food.close;
 });
 
 ///Area highlight///
