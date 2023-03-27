@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
-<meta http-equiv="content-type" charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="content-type" charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -20,44 +20,63 @@
 
 <body>
 <!--Menu bar-->
-<div class="w3-bar" style="background-color:#fff;color:#555;font-size: 15px!important;">
+<div class="w3-bar" style="background-color:#fff;color:#555;font-size: 15px;">
   <img src="icon/logo.png" class="w3-bar-item logo">
   <a href="main.html" class="w3-bar-item w3-button w3-hide-small middle" id="home">หน้าหลัก</a>
-  <a href="index.html" class="w3-bar-item w3-button w3-hide-small middle selected">แผนที่</a>
+  <a href="map.html" class="w3-bar-item w3-button w3-hide-small middle">แผนที่</a>
   <a href="info.html" class="w3-bar-item w3-button w3-hide-small middle">ข้อมูล</a>
-  <a href="contact.html" class="w3-bar-item w3-button w3-hide-small middle">ติดต่อ/เสนอแนะ</a>
+  <a href="index.html" class="w3-bar-item w3-button w3-hide-small middle selected">ติดต่อ/เสนอแนะ</a>
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right  w3-hide-large w3-hide-medium" onclick="myFunction()" style="color:#E4278F!important; font-size: 30px;">&#9776;</a>
 </div>
 <div id="demo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color:#fff;color:#555; font-size: 18px;">
   <a href="main.html" class="w3-bar-item w3-button">หน้าหลัก</a>
-  <a href="index.html" class="w3-bar-item w3-button selected">แผนที่</a>
+  <a href="map.html" class="w3-bar-item w3-button">แผนที่</a>
   <a href="info.html" class="w3-bar-item w3-button">ข้อมูล</a>
-  <a href="contact.html" class="w3-bar-item w3-button">ติดต่อ/เสนอแนะ</a>
+  <a href="index.html" class="w3-bar-item w3-button selected">ติดต่อ/เสนอแนะ</a>
 </div>
 
-<!--Google map-->
-<div id="map"><div id="googleMap"></div></div>
-<!--Legend pop up-->
-<div id="legend"></div>
 
+<!--Form section-->
+<div id="form">
+  <h3 class="mini_header">ข้อเสนอแนะและแบ่งปันประสบการณ์</h3>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0EofCMaLVtRF-1JKHVpaxq6N_ka-e0TdMFB75uWHP6J0jAg/viewform?embedded=true" width="100vw" height = >Loading…</iframe></div>
+</div>
+<!--Contact section-->
+<div class="contact_section">
+  <div id="contact">
+    <h3 class="mini_header">ติดต่อเรา</h3>
+    <div id="alumni_contact">
+      <h3>ติดต่อทีมงานสนจ.</h3>
+      <p>Website: <a href="https://cuaa.chula.ac.th/" target="_blank" style="text-decoration: none;color:black;">https://cuaa.chula.ac.th/</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/ChulaAlumni/" target="_blank" style="text-decoration: none;color:black;">@ChulaAlumni</a></p>
+    </div>
+    <div id="our_contact">
+      <h3>ติดต่อทีมงานนิสิต walkable.bkk</h3>
+      <p>WALKABLE. BKK
+        เป็นโครงการของนิสิตชั้นปีที่ 4 จากสถาบันนวัตกรรมบูรณาการ จุฬาฯ หรือ BAScii ซึ่งมีเป้าหมายเพื่อรณรงค์ให้ การเดินเป็นอีกหนึ่งในทางเลือกสำหรับการเดินทางของทุกคน
+        <br><br>พวกเราตั้งใจที่จะส่งเสริมให้กรุงเทพ มีทางเท้าที่ดี พร้อมสิ่งอำนวยความสะดวกในการเดิน เพื่อให้ทุกคนมี การเดินที่ "สนุก สบาย และ สะดวก"</p>
+      <p>Instagram: <a href="https://www.instagram.com/walkable.bkk/" target="_blank" style="text-decoration: none;color:black;">@walkable.bkk</a></p>
+      <p>e-mail: cumusicwalk@gmail.com</p>
+    </div>
+  </div>
+      
 <!--Footer-->
 <div class="footer">
   <p>เว็บไซต์นี้จัดทำโดยทีมงาน <a href="https://www.instagram.com/walkable.bkk/" target="_blank" style="text-decoration: none;color:black;">walkable.bkk</a></p>
 </div>
-
-<!--Javascript-->  
+          
+<!--Javascript-->          
 <script>
-function myFunction() {
-  var x = document.getElementById("demo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
+  function myFunction() {
+    var x = document.getElementById("demo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
   }
-}
 </script>
 <script src="map.js"></script>
-<script src="data.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2Vo7mDfgZpDGRANZ9ubMdaxMsKCyhlOc&callback=myMap"></script>
 </body>
 </html>
